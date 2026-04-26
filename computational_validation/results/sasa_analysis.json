@@ -1,0 +1,242 @@
+{
+  "fmc63_burial": [
+    {
+      "resname": "TYR",
+      "resnum": 70,
+      "sasa_complex": 16.1,
+      "sasa_isolated": 65.74,
+      "dsasa": 49.64,
+      "pct_buried": 75.5,
+      "is_target": true
+    },
+    {
+      "resname": "TYR",
+      "resnum": 87,
+      "sasa_complex": 22.0,
+      "sasa_isolated": 43.29,
+      "dsasa": 21.29,
+      "pct_buried": 49.2,
+      "is_target": false
+    },
+    {
+      "resname": "HIS",
+      "resnum": 88,
+      "sasa_complex": 25.31,
+      "sasa_isolated": 40.65,
+      "dsasa": 15.34,
+      "pct_buried": 37.7,
+      "is_target": false
+    },
+    {
+      "resname": "ARG",
+      "resnum": 91,
+      "sasa_complex": 85.07,
+      "sasa_isolated": 111.77,
+      "dsasa": 26.7,
+      "pct_buried": 23.9,
+      "is_target": false
+    },
+    {
+      "resname": "ASN",
+      "resnum": 130,
+      "sasa_complex": 29.51,
+      "sasa_isolated": 49.81,
+      "dsasa": 20.31,
+      "pct_buried": 40.8,
+      "is_target": false
+    },
+    {
+      "resname": "PRO",
+      "resnum": 190,
+      "sasa_complex": 51.09,
+      "sasa_isolated": 66.7,
+      "dsasa": 15.62,
+      "pct_buried": 23.4,
+      "is_target": false
+    },
+    {
+      "resname": "ASP",
+      "resnum": 191,
+      "sasa_complex": 69.54,
+      "sasa_isolated": 105.41,
+      "dsasa": 35.87,
+      "pct_buried": 34.0,
+      "is_target": false
+    },
+    {
+      "resname": "TRP",
+      "resnum": 212,
+      "sasa_complex": 0.27,
+      "sasa_isolated": 13.05,
+      "dsasa": 12.78,
+      "pct_buried": 97.9,
+      "is_target": false
+    },
+    {
+      "resname": "GLY",
+      "resnum": 213,
+      "sasa_complex": 4.47,
+      "sasa_isolated": 17.29,
+      "dsasa": 12.82,
+      "pct_buried": 74.1,
+      "is_target": false
+    },
+    {
+      "resname": "SER",
+      "resnum": 214,
+      "sasa_complex": 6.18,
+      "sasa_isolated": 78.24,
+      "dsasa": 72.06,
+      "pct_buried": 92.1,
+      "is_target": true
+    },
+    {
+      "resname": "GLU",
+      "resnum": 215,
+      "sasa_complex": 86.18,
+      "sasa_isolated": 93.19,
+      "dsasa": 7.01,
+      "pct_buried": 7.5,
+      "is_target": false
+    },
+    {
+      "resname": "THR",
+      "resnum": 216,
+      "sasa_complex": 39.31,
+      "sasa_isolated": 72.21,
+      "dsasa": 32.9,
+      "pct_buried": 45.6,
+      "is_target": false
+    },
+    {
+      "resname": "TYR",
+      "resnum": 218,
+      "sasa_complex": 65.83,
+      "sasa_isolated": 78.11,
+      "dsasa": 12.27,
+      "pct_buried": 15.7,
+      "is_target": false
+    },
+    {
+      "resname": "TYR",
+      "resnum": 259,
+      "sasa_complex": 55.71,
+      "sasa_isolated": 82.67,
+      "dsasa": 26.95,
+      "pct_buried": 32.6,
+      "is_target": false
+    },
+    {
+      "resname": "TYR",
+      "resnum": 260,
+      "sasa_complex": 16.78,
+      "sasa_isolated": 114.92,
+      "dsasa": 98.14,
+      "pct_buried": 85.4,
+      "is_target": true
+    },
+    {
+      "resname": "TYR",
+      "resnum": 261,
+      "sasa_complex": 27.46,
+      "sasa_isolated": 129.73,
+      "dsasa": 102.26,
+      "pct_buried": 78.8,
+      "is_target": true
+    },
+    {
+      "resname": "GLY",
+      "resnum": 262,
+      "sasa_complex": 0.37,
+      "sasa_isolated": 18.4,
+      "dsasa": 18.02,
+      "pct_buried": 98.0,
+      "is_target": false
+    },
+    {
+      "resname": "GLY",
+      "resnum": 263,
+      "sasa_complex": 3.26,
+      "sasa_isolated": 27.94,
+      "dsasa": 24.68,
+      "pct_buried": 88.3,
+      "is_target": false
+    },
+    {
+      "resname": "TYR",
+      "resnum": 265,
+      "sasa_complex": 20.11,
+      "sasa_isolated": 44.36,
+      "dsasa": 24.25,
+      "pct_buried": 54.7,
+      "is_target": false
+    }
+  ],
+  "cd19_burial": [
+    {
+      "resname": "TYR",
+      "resnum": 157,
+      "dsasa": 14.58
+    },
+    {
+      "resname": "ALA",
+      "resnum": 160,
+      "dsasa": 9.35
+    },
+    {
+      "resname": "ARG",
+      "resnum": 163,
+      "dsasa": 133.2
+    },
+    {
+      "resname": "PRO",
+      "resnum": 164,
+      "dsasa": 35.84
+    },
+    {
+      "resname": "GLU",
+      "resnum": 165,
+      "dsasa": 51.78
+    },
+    {
+      "resname": "ILE",
+      "resnum": 166,
+      "dsasa": 50.29
+    },
+    {
+      "resname": "GLU",
+      "resnum": 168,
+      "dsasa": 55.83
+    },
+    {
+      "resname": "VAL",
+      "resnum": 217,
+      "dsasa": 13.65
+    },
+    {
+      "resname": "PRO",
+      "resnum": 219,
+      "dsasa": 47.24
+    },
+    {
+      "resname": "LYS",
+      "resnum": 220,
+      "dsasa": 112.05
+    },
+    {
+      "resname": "GLY",
+      "resnum": 221,
+      "dsasa": 24.34
+    },
+    {
+      "resname": "PRO",
+      "resnum": 222,
+      "dsasa": 99.88
+    },
+    {
+      "resname": "LYS",
+      "resnum": 223,
+      "dsasa": 48.06
+    }
+  ]
+}

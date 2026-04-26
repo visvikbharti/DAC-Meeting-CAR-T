@@ -1,0 +1,19 @@
+,DDG,antibody_annotation,antibody_chains,antigen_chains,chain,forward_distance,mutant,position,wild,outcome,within_binding_interface
+1,-0.81,,D,C,D,2.607,A,214,S,decreased affinity,True
+2,0.9,,D,C,D,2.607,D,214,S,increased affinity,True
+3,-0.91,,D,C,D,2.607,G,214,S,decreased affinity,True
+4,0.3,,D,C,D,2.607,Y,214,S,increased affinity,True
+5,-0.31,,D,C,D,2.607,K,214,S,decreased affinity,True
+6,0.2,,D,C,D,2.607,N,214,S,increased affinity,True
+7,-4.79,H98(CDR-H3),D,C,D,2.964,A,260,Y,decreased affinity,True
+8,-3.14,H98(CDR-H3),D,C,D,2.964,D,260,Y,decreased affinity,True
+9,-4.77,H98(CDR-H3),D,C,D,2.964,G,260,Y,decreased affinity,True
+10,-4.68,H98(CDR-H3),D,C,D,2.964,S,260,Y,decreased affinity,True
+11,-3.71,H98(CDR-H3),D,C,D,2.964,K,260,Y,decreased affinity,True
+12,-2.88,H98(CDR-H3),D,C,D,2.964,N,260,Y,decreased affinity,True
+13,-4.95,,D,C,D,3.204,A,261,Y,decreased affinity,True
+14,-2.69,,D,C,D,3.204,D,261,Y,decreased affinity,True
+15,-4.94,,D,C,D,3.204,G,261,Y,decreased affinity,True
+16,-3.32,,D,C,D,3.204,S,261,Y,decreased affinity,True
+17,-2.33,,D,C,D,3.204,K,261,Y,decreased affinity,True
+18,-2.95,,D,C,D,3.204,N,261,Y,decreased affinity,True
