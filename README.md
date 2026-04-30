@@ -93,11 +93,11 @@ This repository contains comprehensive, citation-verified documentation for the 
 
 - **CAR construct:** Anti-CD19 CAR (FMC63 scFv)
 - **Costimulatory domain:** 4-1BB recommended (Drent et al. 2019: 4-1BB more sensitive to affinity changes than CD28)
-- **Target antigen:** CD19 (PDB: 7URV, cryo-EM: Singh et al. 2023)
+- **Target antigen:** CD19 (PDB: 7URV, cryo-EM: He et al. 2023)
 - **Key interacting residues:** Tyr260, Tyr261, Ser214
-- **Published FMC63-CD19 KD:** 5.1 nM (Seigner et al. 2023) / 4.5 nM (Singh et al. 2023) by SPR
+- **Published FMC63-CD19 KD:** 5.1 nM (Seigner et al. 2023) / 4.5 nM (He et al. 2023) by SPR
 - **Mutagenesis:** Site-saturation mutagenesis using NNK primers
-- **Published variant data:** Y260A (no binding), Y261A (682 nM), Y70A (275 nM) — Singh et al. 2023
+- **Published variant data:** Y260A (no binding), Y261A (682 nM), Y70A (275 nM) — He et al. 2023
 - **Functional readouts:** CD69 activation, cytotoxicity, exhaustion (PD-1/TIM-3/LAG-3), memory, cytokines
 - **Kinetic characterization:** SPR (Biacore T200) primary; BLI (Octet) screening
 - **Cell system:** Jurkat (screening) → Primary T cells (validation) → NSG mice (in vivo, optional)

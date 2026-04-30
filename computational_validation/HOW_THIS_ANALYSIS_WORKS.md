@@ -18,7 +18,7 @@ When you selected Tyr260, Tyr261, and Ser214 as targets for site-saturation muta
 The computational validation answers this by:
 1. **Independently confirming** that these residues are at the binding interface
 2. **Quantifying** how much each residue contributes to the interface
-3. **Showing that published experimental data** (from Singh et al., 2023) validates our structural predictions
+3. **Showing that published experimental data** (from He et al., 2023) validates our structural predictions
 4. **Predicting what to expect** from the mutations you plan to make
 
 ---
@@ -35,7 +35,7 @@ The computational validation answers this by:
 - **Chain C** = CD19 (the antigen, 218 amino acid residues)
 - **Chain D** = FMC63 scFv (the antibody fragment, 227 amino acid residues)
 
-**Reference:** Singh et al., 2023, *Science Immunology* 8:eadf1426 (PMC10228544)
+**Reference:** He et al., 2023, *Science Immunology* 8:eadf1426 (PMC10228544)
 
 ### Step 2: Finding Interface Residues (Contact Analysis)
 
@@ -122,7 +122,7 @@ The difference — **dSASA = SASA(isolated) − SASA(complex)** — tells us how
 
 **Data source:** FreeSASA calculations on PDB 7URV. These are real computed values, not fabricated.
 
-**How to cite:** "Solvent-accessible surface area calculated using FreeSASA (Mitternacht, 2016) on the cryo-EM structure PDB 7URV (Singh et al., 2023)."
+**How to cite:** "Solvent-accessible surface area calculated using FreeSASA (Mitternacht, 2016) on the cryo-EM structure PDB 7URV (He et al., 2023)."
 
 ### Figure 2: target_residue_contacts.png
 
@@ -136,7 +136,7 @@ The difference — **dSASA = SASA(isolated) − SASA(complex)** — tells us how
 
 **What it demonstrates:** Tyr260 has a critical side-chain H-bond (shown in green), which explains why Y260A completely abolishes binding. Tyr261 has more contacts (6 blue/green boxes) but its H-bond is through the backbone, so Y261A retains some binding.
 
-**Data source:** Contact distances computed from PDB 7URV atom coordinates. Experimental KD values from Singh et al., 2023.
+**Data source:** Contact distances computed from PDB 7URV atom coordinates. Experimental KD values from He et al., 2023.
 
 ### Figure 3: burial_vs_affinity.png
 
@@ -151,7 +151,7 @@ The difference — **dSASA = SASA(isolated) − SASA(complex)** — tells us how
 
 **What it demonstrates:** There's a general trend: more buried residues are more critical for binding. But the correlation isn't perfect because H-bonds matter more than burial alone (Y260 is slightly less buried than Y261 but has a much greater effect because of its side-chain H-bond).
 
-**Data source:** dSASA from FreeSASA. KD values from Singh et al., 2023. Y260A plotted as 5000 nM (no binding detected; this is a lower bound).
+**Data source:** dSASA from FreeSASA. KD values from He et al., 2023. Y260A plotted as 5000 nM (no binding detected; this is a lower bound).
 
 ---
 
@@ -177,13 +177,13 @@ If the DAC asks "what are the limitations of this analysis?", here are honest an
 
 ### Recommended talking points:
 
-1. "We performed computational validation of our target residues using the cryo-EM structure PDB 7URV, published by Singh et al. in Science Immunology in 2023."
+1. "We performed computational validation of our target residues using the cryo-EM structure PDB 7URV, published by He et al. in Science Immunology in 2023."
 
 2. "Our analysis shows that the three target residues — Tyr260, Tyr261, and Ser214 — along with the control position Tyr70, are the **top four most-connected residues** at the FMC63-CD19 interface."
 
 3. "These four residues alone account for **51% of the total buried surface area** at the interface — confirming they are the most critical contact points."
 
-4. "Importantly, published alanine scanning data from Singh et al. validates our structural analysis: Y260A abolishes binding entirely due to loss of a critical hydrogen bond, while Y261A and Y70A show progressive weaker effects consistent with their structural roles."
+4. "Importantly, published alanine scanning data from He et al. validates our structural analysis: Y260A abolishes binding entirely due to loss of a critical hydrogen bond, while Y261A and Y70A show progressive weaker effects consistent with their structural roles."
 
 5. "Ser214, which has the **highest burial percentage** (92.1%) and forms a very short hydrogen bond (2.61 Å) to CD19, has never been mutated in published studies. Our project will provide the first experimental data on this position — and our structural analysis predicts a significant effect."
 

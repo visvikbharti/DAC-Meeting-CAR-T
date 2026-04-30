@@ -1,4 +1,4 @@
-# Novelty Strategy: Addressing the Singh et al. 2023 Overlap
+# Novelty Strategy: Addressing the He et al. 2023 Overlap
 
 ## Critical Analysis for Manpreet Kour
 ### Prepared in Response to PI Feedback
@@ -7,7 +7,7 @@
 
 ## The Problem
 
-Singh et al. (2023, *Science Immunology* 8:eadf1426, PMID: 36867678) published:
+He et al. (2023, *Science Immunology* 8:eadf1426, PMID: 36867678) published:
 - Cryo-EM structure of FMC63-CD19 (PDB 7URV)
 - Alanine scanning at Y260, Y261, Y70 with SPR kinetics
 - Y260A → no binding; Y261A → KD = 682.5 nM (152× weaker); Y70A → KD = 275.3 nM (61× weaker)
@@ -19,7 +19,7 @@ This document outlines a strategy to ensure clear, defensible novelty.
 
 ---
 
-## What Singh et al. 2023 Actually Did vs. Did Not Do
+## What He et al. 2023 Actually Did vs. Did Not Do
 
 ### What They DID (Already Published)
 
@@ -100,9 +100,9 @@ This document outlines a strategy to ensure clear, defensible novelty.
 
 ### Tier 2: Saturation Mutagenesis at Published Residues (Strong Novelty)
 
-For Y260 and Y261, Singh et al. tested **only alanine** (one substitution). Manpreet's NNK saturation mutagenesis tests **all 20 amino acids** — this is fundamentally different:
+For Y260 and Y261, He et al. tested **only alanine** (one substitution). Manpreet's NNK saturation mutagenesis tests **all 20 amino acids** — this is fundamentally different:
 
-| Approach | Singh et al. 2023 | Manpreet's Project |
+| Approach | He et al. 2023 | Manpreet's Project |
 |----------|:-----------------:|:------------------:|
 | Mutations per position | 1 (Ala only) | **20 (all amino acids via NNK)** |
 | Functional readouts | Cytotoxicity only | Cytotoxicity + exhaustion + memory + rechallenge + cytokines |
@@ -142,12 +142,12 @@ Then CORRELATE:
 
 ## Revised Residue Selection Rationale
 
-### Before (Potentially Overlapping with Singh et al.)
+### Before (Potentially Overlapping with He et al.)
 
 | Position | Justification | Problem |
 |----------|--------------|---------|
-| Y260 | Key interface residue | Singh et al. already published Y260A |
-| Y261 | Key interface residue | Singh et al. already published Y261A |
+| Y260 | Key interface residue | He et al. already published Y260A |
+| Y261 | Key interface residue | He et al. already published Y261A |
 | S214 | Key interface residue | Novel — no published data |
 
 ### After (Clear Novelty)
@@ -156,7 +156,7 @@ Then CORRELATE:
 |----------|----------------|:-------------:|
 | **S214** | **PRIMARY target** — fine-tuning position, S214D gain-of-function, never mutated | **Completely novel** |
 | **Trp212** | **PRIMARY target** — most buried residue (97.9%), never mutated, tests hydrophobic anchoring | **Completely novel** |
-| **Y260** | **SECONDARY target** — NNK saturation (20 AA, not just Ala); use Singh Y260A as validation | **Novel approach** (saturation vs single Ala) |
+| **Y260** | **SECONDARY target** — NNK saturation (20 AA, not just Ala); use He et al. Y260A as validation | **Novel approach** (saturation vs single Ala) |
 | **Y261** | **SECONDARY target** — same as Y260 rationale | **Novel approach** |
 
 ---
@@ -165,13 +165,13 @@ Then CORRELATE:
 
 ### Addressing the PI's Concern Directly
 
-> "We are aware that Singh et al. (2023) published alanine scanning data at Y260 and Y261, which we use as **validation of our computational predictions** (our structural analysis correctly predicted the ranking Y260A > Y261A > Y70A). However, our project differs in three fundamental ways:
+> "We are aware that He et al. (2023) published alanine scanning data at Y260 and Y261, which we use as **validation of our computational predictions** (our structural analysis correctly predicted the ranking Y260A > Y261A > Y70A). However, our project differs in three fundamental ways:
 >
 > **First, our primary targets are novel residues.** Ser214 (92.1% buried, 2 H-bonds, never mutated) and Trp212 (97.9% buried, never mutated) are completely unstudied. Our mCSM-AB2 predictions suggest S214 is particularly valuable — it tolerates mutations without catastrophic loss, enabling a continuous affinity gradient in the functional range.
 >
-> **Second, our approach is saturation mutagenesis, not alanine scanning.** Singh et al. tested 3 single-residue alanine mutations. We test all 20 amino acids at each of 4 positions — generating 60+ affinity variants spanning from enhanced binding (S214D) to complete loss (Y260A). This creates the systematic affinity gradient needed for functional correlation.
+> **Second, our approach is saturation mutagenesis, not alanine scanning.** He et al. tested 3 single-residue alanine mutations. We test all 20 amino acids at each of 4 positions — generating 60+ affinity variants spanning from enhanced binding (S214D) to complete loss (Y260A). This creates the systematic affinity gradient needed for functional correlation.
 >
-> **Third, and most importantly, our scientific question is different.** Singh et al. asked 'which residues are important for binding?' — a structural biology question. We ask 'how does systematically varying binding affinity affect the functional fate of CAR-T cells across activation, exhaustion, memory, and persistence?' This functional correlation dataset does not exist for any CAR system."
+> **Third, and most importantly, our scientific question is different.** He et al. asked 'which residues are important for binding?' — a structural biology question. We ask 'how does systematically varying binding affinity affect the functional fate of CAR-T cells across activation, exhaustion, memory, and persistence?' This functional correlation dataset does not exist for any CAR system."
 
 ### If the PI Asks "What If Someone Publishes S214 Mutations Before You?"
 
@@ -189,8 +189,8 @@ Then CORRELATE:
 |----------|:--:|:-------------------:|:---------------:|-----------------|
 | **S214** | Ser | ~94 | **None** | Continuous affinity gradient (neutral range). S214D may be gain-of-function. |
 | **Trp212** | Trp | ~94 | **None** | Likely hotspot — dramatic effects expected. Trp→Phe tests aromatic vs indole. |
-| **Y260** | Tyr | ~94 | Ala only (Singh 2023) | Most variants non-functional. Tests lower boundary of CAR activation. |
-| **Y261** | Tyr | ~94 | Ala only (Singh 2023) | Severe but variable effects. Y261K least destabilized (mCSM-AB2: -2.33). |
+| **Y260** | Tyr | ~94 | Ala only (He 2023) | Most variants non-functional. Tests lower boundary of CAR activation. |
+| **Y261** | Tyr | ~94 | Ala only (He 2023) | Severe but variable effects. Y261K least destabilized (mCSM-AB2: -2.33). |
 | **Total** | | **~376 clones** | | Full affinity spectrum from enhanced to ablated |
 
 ---
@@ -207,7 +207,7 @@ Then CORRELATE:
 
 ## Key References
 
-1. **Singh N et al.** "CD19 CAR antigen engagement mechanisms and affinity tuning." *Science Immunology* 8:eadf1426, 2023. PMID: 36867678. PMC10228544. — Published Y260A, Y261A, Y70A alanine scanning.
+1. **He C et al.** "CD19 CAR antigen engagement mechanisms and affinity tuning." *Science Immunology* 8:eadf1426, 2023. PMID: 36867678. PMC10228544. — Published Y260A, Y261A, Y70A alanine scanning.
 
 2. **Seigner J et al.** "Solving the mystery of the FMC63-CD19 affinity." *Scientific Reports* 13:23024, 2023. PMID: 38155191. PMC10754921. — Confirmed FMC63 WT KD = 5.1 nM.
 
@@ -221,4 +221,4 @@ Then CORRELATE:
 
 ---
 
-*This document addresses the PI's concern about overlap with Singh et al. 2023. The strategy ensures clear, defensible novelty through novel residue targets (S214, Trp212), saturation mutagenesis (beyond single Ala mutations), and comprehensive functional correlation (the core PhD contribution). All claims are evidence-based. Date: 2026-04-27.*
+*This document addresses the PI's concern about overlap with He et al. 2023. The strategy ensures clear, defensible novelty through novel residue targets (S214, Trp212), saturation mutagenesis (beyond single Ala mutations), and comprehensive functional correlation (the core PhD contribution). All claims are evidence-based. Date: 2026-04-27.*

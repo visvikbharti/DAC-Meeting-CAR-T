@@ -51,7 +51,7 @@ Comprehensive experimental design research using 7 parallel research agents, 100
 Research prompted by Vishal's questions about Raji limitations, alternative systems for tunable CD19 density, and binding kinetics platform comparison.
 
 6. `11_Alternative_Assay_Systems.md` (30+ KB) — NALM-6 CD19-KO + graded re-expression (Majzner 2020), K562-CD19, CHO-CD19 (Low/Med/High for xCELLigence), SLB systems (5 papers), 2D kinetics (micropipette/BFP), FACS solutions (Raji-GFP-Luc2, counting beads), 4-phase implementation strategy, 19 verified references
-7. `12_Biophysical_Platforms_Kinetics.md` (47 KB) — SPR vs BLI vs MST vs ITC vs flow cytometry vs 2D kinetics comparison, published FMC63-CD19 KD values (5.1 nM Seigner 2023, 4.5 nM Singh 2023), 7-platform comparison table, instrument costs, CSIR-IGIB availability notes
+7. `12_Biophysical_Platforms_Kinetics.md` (47 KB) — SPR vs BLI vs MST vs ITC vs flow cytometry vs 2D kinetics comparison, published FMC63-CD19 KD values (5.1 nM Seigner 2023, 4.5 nM He 2023), 7-platform comparison table, instrument costs, CSIR-IGIB availability notes
 
 **Mega-document updated:** `COMPLETE_Reference_Document.md` now includes Part II (Sections 6-10) with experimental design summaries + 14 new verified references.
 
@@ -59,7 +59,7 @@ Research prompted by Vishal's questions about Raji limitations, alternative syst
 
 **Published FMC63-CD19 Kinetics (Verified):**
 - KD = 5.1 nM (Seigner et al. 2023, *Sci Rep*, Biacore T200): kon = 1.0 x 10^5 M^-1 s^-1, koff = 5.3 x 10^-4 s^-1
-- KD = 4.5 nM (Singh et al. 2023, *Science Immunology*)
+- KD = 4.5 nM (He et al. 2023, *Science Immunology*)
 - Published range: 0.3-47 nM (>100-fold variation due to artifacts)
 
 **Published FMC63 Affinity Variants at Target Residues:**

@@ -10,7 +10,7 @@ Manpreet submitted 18 mutations across 3 target positions in FMC63 scFv (Chain D
 
 **Tool:** mCSM-AB2 (Myung et al., *Bioinformatics* 36:1453-1459, 2020. PMID: 31665262)
 **Accuracy:** Pearson r = 0.73-0.74 on antibody-antigen benchmarks
-**PDB:** 7URV (FMC63-CD19 cryo-EM structure, Singh et al., 2023)
+**PDB:** 7URV (FMC63-CD19 cryo-EM structure, He et al., 2023)
 **Antibody chain:** D (FMC63 scFv)
 **Antigen chain:** C (CD19)
 
@@ -74,14 +74,14 @@ In mCSM-AB2:
 
 **Interpretation:**
 - mCSM-AB2 annotates Y260 as **H98(CDR-H3)** in Chothia numbering — confirming it is in the CDR-H3 loop, the most critical antigen-binding loop
-- **Y260A (-4.79):** Consistent with published data — Singh et al. 2023 reported **no detectable binding** for Y260A
+- **Y260A (-4.79):** Consistent with published data — He et al. 2023 reported **no detectable binding** for Y260A
 - **Y260G (-4.77):** Nearly identical to Y260A — removing the side chain entirely is catastrophic
 - **Y260S (-4.68):** Even serine, which has a hydroxyl group, cannot compensate for the loss of the tyrosine aromatic ring and its specific geometry
 - **Y260K (-3.71):** Lysine is large and charged but the wrong shape for this pocket
 - **Y260D (-3.14):** Aspartate provides a carboxylate near where the hydroxyl was, partially compensating
 - **Y260N (-2.88):** Asparagine is the least destabilizing — its amide group may partially replace the tyrosine OH hydrogen bond
 
-**Validation against experimental data:** The tool predicts Y260A = -4.79 kcal/mol (severe loss). Experimentally, Y260A shows NO detectable binding (Singh et al., 2023). This is strong concordance.
+**Validation against experimental data:** The tool predicts Y260A = -4.79 kcal/mol (severe loss). Experimentally, Y260A shows NO detectable binding (He et al., 2023). This is strong concordance.
 
 **For Manpreet:** Position 260 is extremely sensitive. Even the "best" substitution (N, -2.88) still causes major affinity loss. The NNK library at this position will likely yield mostly non-functional variants. However, this makes it ideal for studying the **lower boundary** of functional affinity — which variants retain enough binding for CAR activation despite severe affinity reduction?
 
@@ -90,7 +90,7 @@ In mCSM-AB2:
 **Summary:** ALL 6 mutations at Tyr261 produce large negative ΔΔG values, all exceeding the -2.0 hotspot threshold. Every substitution dramatically decreases affinity.
 
 **Interpretation:**
-- **Y261A (-4.95):** The largest predicted destabilization of all 18 mutations. Consistent with published data — Singh et al. 2023 reported Y261A KD = 682.5 nM (152-fold weaker)
+- **Y261A (-4.95):** The largest predicted destabilization of all 18 mutations. Consistent with published data — He et al. 2023 reported Y261A KD = 682.5 nM (152-fold weaker)
 - **Y261G (-4.94):** Nearly identical to Y261A — consistent with both losing the aromatic ring
 - **Y261S (-3.32):** Serine partially compensates with its hydroxyl
 - **Y261N (-2.95):** Asparagine's amide provides partial compensation
@@ -122,9 +122,9 @@ In mCSM-AB2:
 
 | Mutation | mCSM-AB2 ΔΔG | Published Result | Agreement? |
 |----------|:------------:|:----------------:|:----------:|
-| Y260A | -4.79 (severe loss) | No binding (Singh 2023) | **YES** |
-| Y261A | -4.95 (severe loss) | KD = 682.5 nM, 152x weaker (Singh 2023) | **YES** |
-| Y70A* | Not tested in this run | KD = 275.3 nM, 61x weaker (Singh 2023) | — |
+| Y260A | -4.79 (severe loss) | No binding (He 2023) | **YES** |
+| Y261A | -4.95 (severe loss) | KD = 682.5 nM, 152x weaker (He 2023) | **YES** |
+| Y70A* | Not tested in this run | KD = 275.3 nM, 61x weaker (He 2023) | — |
 
 *Y70A was not included in Manpreet's mutation list but could be submitted as an additional validation point.
 

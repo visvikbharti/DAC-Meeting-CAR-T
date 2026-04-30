@@ -17,9 +17,9 @@ This computational validation answers that question using two independent approa
 
 ### 1.2 What We Used
 
-**The structure:** PDB 7URV — a cryo-electron microscopy structure of FMC63 scFv (your antibody fragment) bound to CD19 (your target antigen). Published by Singh et al. in *Science Immunology* in 2023.
+**The structure:** PDB 7URV — a cryo-electron microscopy structure of FMC63 scFv (your antibody fragment) bound to CD19 (your target antigen). Published by He et al. in *Science Immunology* in 2023.
 
-**Why this structure matters:** Before 2023, no one had solved the 3D structure of FMC63 bound to CD19. Singh et al. used cryo-EM to determine exactly how every atom in FMC63 interacts with every atom in CD19. This structure (deposited as PDB 7URV) is the foundation of your entire computational analysis.
+**Why this structure matters:** Before 2023, no one had solved the 3D structure of FMC63 bound to CD19. He et al. used cryo-EM to determine exactly how every atom in FMC63 interacts with every atom in CD19. This structure (deposited as PDB 7URV) is the foundation of your entire computational analysis.
 
 **The chain assignments in PDB 7URV:**
 - **Chain C** = CD19 (the antigen, 218 amino acids)
@@ -171,7 +171,7 @@ In mCSM-AB2's convention:
 
 ### 3.5 How to Answer "How Reliable Is This?"
 
-> "mCSM-AB2 achieves Pearson correlation of 0.73-0.74 against experimental antibody-antigen binding data, which is the highest reported accuracy for an antibody-specific ΔΔG predictor. However, we use it as one line of evidence alongside our independent structural analysis — the fact that both approaches agree gives us higher confidence than either alone. We also validated the tool against published experimental data: the Y260A and Y261A predictions correctly identify these as severe hotspots, consistent with the no-binding and 152-fold-weaker results from Singh et al. 2023."
+> "mCSM-AB2 achieves Pearson correlation of 0.73-0.74 against experimental antibody-antigen binding data, which is the highest reported accuracy for an antibody-specific ΔΔG predictor. However, we use it as one line of evidence alongside our independent structural analysis — the fact that both approaches agree gives us higher confidence than either alone. We also validated the tool against published experimental data: the Y260A and Y261A predictions correctly identify these as severe hotspots, consistent with the no-binding and 152-fold-weaker results from He et al. 2023."
 
 ---
 
@@ -225,7 +225,7 @@ In mCSM-AB2's convention:
 
 1. **Structural analysis (our calculation):** Target residues are the top 4 most-connected at the interface, accounting for 51.2% of total buried area
 2. **mCSM-AB2 prediction (machine learning):** Y260 and Y261 are critical hotspots; S214 is a fine-tuning position
-3. **Published experimental data (Singh et al. 2023):** Y260A = no binding, Y261A = 152× weaker — matches both our structural analysis AND mCSM-AB2 predictions
+3. **Published experimental data (He et al. 2023):** Y260A = no binding, Y261A = 152× weaker — matches both our structural analysis AND mCSM-AB2 predictions
 
 **All three independent approaches converge on the same conclusion:** These are the right residues to mutate.
 
@@ -265,7 +265,7 @@ Blue = decreased affinity (destabilizing mutations), Red = increased affinity (s
 
 ### "How do you know mCSM-AB2 is accurate for your specific system?"
 
-> "We validated it against published experimental data from Singh et al. 2023. The tool correctly predicts Y260A as a severe hotspot (-4.79 kcal/mol, matching the experimental finding of no detectable binding) and Y261A as a severe hotspot (-4.95 kcal/mol, matching the experimental KD of 682.5 nM). This gives us confidence that its predictions for untested mutations (like S214 variants) are meaningful."
+> "We validated it against published experimental data from He et al. 2023. The tool correctly predicts Y260A as a severe hotspot (-4.79 kcal/mol, matching the experimental finding of no detectable binding) and Y261A as a severe hotspot (-4.95 kcal/mol, matching the experimental KD of 682.5 nM). This gives us confidence that its predictions for untested mutations (like S214 variants) are meaningful."
 
 ### "Why didn't you use Rosetta or FoldX?"
 
@@ -297,7 +297,7 @@ Blue = decreased affinity (destabilizing mutations), Red = increased affinity (s
 
 **One slide, one message:**
 
-> "Computational validation confirms target residue selection. Tyr260 and Tyr261 are critical binding hotspots — every tested mutation severely decreases affinity. Ser214 tolerates mutations well, making it ideal for fine-tuning the affinity-function relationship. Predictions match published experimental data (Singh et al., 2023)."
+> "Computational validation confirms target residue selection. Tyr260 and Tyr261 are critical binding hotspots — every tested mutation severely decreases affinity. Ser214 tolerates mutations well, making it ideal for fine-tuning the affinity-function relationship. Predictions match published experimental data (He et al., 2023)."
 
 ---
 
@@ -468,7 +468,7 @@ This is the most important interpretive column. It categorizes each mutation by 
 
 | # | Mutation | ΔΔG | Class | Plain-English Interpretation |
 |---|----------|:---:|:-----:|------------------------------|
-| 7 | Y→A | -4.79 | HOTSPOT | **Matches published data.** Alanine removes the aromatic ring AND the hydroxyl. The 2.96 Å H-bond to Ile166 is destroyed. Singh et al. 2023 confirmed: no detectable binding. |
+| 7 | Y→A | -4.79 | HOTSPOT | **Matches published data.** Alanine removes the aromatic ring AND the hydroxyl. The 2.96 Å H-bond to Ile166 is destroyed. He et al. 2023 confirmed: no detectable binding. |
 | 8 | Y→D | -3.14 | HOTSPOT | Aspartate provides a carboxylate that partially replaces the hydroxyl's H-bonding, but the aromatic ring contacts are lost. Still severe. |
 | 9 | Y→G | -4.77 | HOTSPOT | Glycine removes everything — nearly identical effect to alanine. |
 | 10 | Y→S | -4.68 | HOTSPOT | Serine provides a hydroxyl but is much smaller than tyrosine. The hydroxyl might partially rescue the H-bond, but the aromatic ring contacts with Tyr157/Pro164/Pro219 are completely lost. |

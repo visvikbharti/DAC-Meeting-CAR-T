@@ -8,9 +8,9 @@
 
 ## Purpose
 
-This document provides a complete computational validation that the three residues selected for site-saturation mutagenesis — **Tyr260**, **Tyr261**, and **Ser214** — are the most critical interface residues in the FMC63-CD19 complex. All analysis is performed on the cryo-EM structure PDB 7URV (Singh et al., 2023, *Science Immunology* 8:eadf1426, PMC10228544).
+This document provides a complete computational validation that the three residues selected for site-saturation mutagenesis — **Tyr260**, **Tyr261**, and **Ser214** — are the most critical interface residues in the FMC63-CD19 complex. All analysis is performed on the cryo-EM structure PDB 7URV (He et al., 2023, *Science Immunology* 8:eadf1426, PMC10228544).
 
-**Validation approach:** We combine structural interface analysis (contact mapping, hydrogen bonds, solvent-accessible surface area burial) with published experimental alanine scanning data (Singh et al., 2023) to demonstrate that our computational results predict the experimental outcomes.
+**Validation approach:** We combine structural interface analysis (contact mapping, hydrogen bonds, solvent-accessible surface area burial) with published experimental alanine scanning data (He et al., 2023) to demonstrate that our computational results predict the experimental outcomes.
 
 ---
 
@@ -23,7 +23,7 @@ This document provides a complete computational validation that the three residu
 | Title | FMC63 scFv in complex with soluble CD19 |
 | Method | Cryo-electron microscopy |
 | Resolution | Not specified (cryo-EM) |
-| Authors | Singh N, Frey NV, Engels B, et al. |
+| Authors | He C, Mansilla-Soto J, Khanra N, Hamieh M, Bustos V, Paquette AJ, Garcia Angus A, Shore DM, Rice WJ, Khelashvili G, Sadelain M, Meyerson JR |
 | Publication | Science Immunology 8:eadf1426, 2023 |
 | Deposition date | 2022-04-22 |
 | PMID | 36867678 |
@@ -287,7 +287,7 @@ Based on the structural analysis, we predict for S214A:
 
 ### 7.1 Structure Source
 - **PDB:** 7URV (downloaded from RCSB PDB, rcsb.org)
-- **Citation:** Singh N et al., *Science Immunology* 8:eadf1426, 2023. PMC10228544.
+- **Citation:** He C et al., *Science Immunology* 8:eadf1426, 2023. PMC10228544.
 
 ### 7.2 Software
 
@@ -350,7 +350,7 @@ At each position, the NNK library will sample all 20 amino acids. Based on the s
 
 ## 10. Verified References
 
-1. **Singh N, et al.** "CD19 CAR antigen engagement mechanisms and affinity tuning." *Science Immunology* 8:eadf1426, 2023. PMID: 36867678. PMC10228544. **VERIFIED** — Source of PDB 7URV and experimental Y260A/Y261A/Y70A data.
+1. **He C, et al.** "CD19 CAR antigen engagement mechanisms and affinity tuning." *Science Immunology* 8:eadf1426, 2023. PMID: 36867678. PMC10228544. **VERIFIED** — Source of PDB 7URV and experimental Y260A/Y261A/Y70A data.
 
 2. **Seigner J, et al.** "Solving the mystery of the FMC63-CD19 affinity." *Scientific Reports* 13:23024, 2023. PMID: 38155191. PMC10754921. **VERIFIED** — Confirmed FMC63 WT KD = 5.1 nM by SPR.
 
@@ -360,4 +360,4 @@ At each position, the NNK library will sample all 20 amino acids. Based on the s
 
 ---
 
-*All analysis performed on PDB 7URV. All experimental values from Singh et al., 2023. No data fabricated. Computational predictions are clearly distinguished from experimental results. Date: 2026-04-27.*
+*All analysis performed on PDB 7URV. All experimental values from He et al., 2023. No data fabricated. Computational predictions are clearly distinguished from experimental results. Date: 2026-04-27.*

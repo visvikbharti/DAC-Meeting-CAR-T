@@ -13,7 +13,7 @@ A bar chart with 19 bars. Each bar represents one amino acid residue in the FMC6
 
 ### How the Data Was Generated
 
-1. **Downloaded PDB 7URV** — the cryo-EM structure of FMC63 bound to CD19 (Singh et al., 2023, *Science Immunology*).
+1. **Downloaded PDB 7URV** — the cryo-EM structure of FMC63 bound to CD19 (He et al., 2023, *Science Immunology*).
 
 2. **Extracted individual chains** — separated the complex PDB file into two files: one containing only Chain D (FMC63, isolated) and one containing only Chain C (CD19, isolated).
 
@@ -81,7 +81,7 @@ Four panels arranged in a 2×2 grid. Each panel shows one target residue (red bo
 
 3. **Hydrogen bonds** were identified as N/O atom pairs within 3.5 Å (shown in green).
 
-4. **Published experimental KD** for the alanine mutant (from Singh et al., 2023) is shown at the bottom of each panel.
+4. **Published experimental KD** for the alanine mutant (from He et al., 2023) is shown at the bottom of each panel.
 
 ### How to Read Each Panel
 
@@ -103,19 +103,19 @@ Four panels arranged in a 2×2 grid. Each panel shows one target residue (red bo
 **TYR 260 → CD19 contacts:**
 - 5 contacts, 1 H-bond (ILE166 at 2.96 Å)
 - The H-bond is from TYR260's side-chain OH to ILE166's backbone N
-- Alanine mutant: **no binding** (>1000× loss) — published in Singh et al., 2023
+- Alanine mutant: **no binding** (>1000× loss) — published in He et al., 2023
 - **Interpretation:** Removing the OH destroys a critical side-chain H-bond that cannot be compensated
 
 **TYR 261 → CD19 contacts:**
 - 6 contacts (most of any residue), 1 H-bond (PRO219 at 3.20 Å)
 - The H-bond is through TYR261's **backbone N** (not side-chain)
-- Alanine mutant: KD = 682.5 nM (152× weaker) — Singh et al., 2023
+- Alanine mutant: KD = 682.5 nM (152× weaker) — He et al., 2023
 - **Interpretation:** Alanine retains the backbone N, so the H-bond is preserved. The 152-fold loss comes from losing the large aromatic side chain's van der Waals contacts with 6 CD19 residues.
 
 **TYR 70 → CD19 contacts:**
 - 3 contacts, 0 H-bonds (van der Waals only)
 - Contacts with ARG163, GLU165, ALA160 — all moderate distances
-- Alanine mutant: KD = 275.3 nM (61× weaker) — Singh et al., 2023
+- Alanine mutant: KD = 275.3 nM (61× weaker) — He et al., 2023
 - **Interpretation:** Fewest contacts and no H-bonds → mildest effect, as expected
 
 ### Exact Contact Distances
@@ -156,7 +156,7 @@ This figure combines two independent data sources:
 
 1. **X-axis (dSASA):** Computed from our SASA analysis of PDB 7URV using FreeSASA (see Figure 1 description)
 
-2. **Y-axis (KD):** Published experimental values from Singh et al., 2023:
+2. **Y-axis (KD):** Published experimental values from He et al., 2023:
    - Y70A: KD = 275.3 nM
    - Y260A: No detectable binding — plotted as 5000 nM (this is a lower bound; the actual KD could be much higher)
    - Y261A: KD = 682.5 nM
@@ -184,7 +184,7 @@ Y260A showed "no detectable binding" by SPR. In our plot, we show it at 5000 nM,
 - 50,000 nM (severe loss)
 - Infinity (truly no binding)
 
-The SPR detection limit depends on the protein concentration range tested. Singh et al. likely tested up to low micromolar concentrations. The key point is that binding was completely abolished, which our structural analysis explains (loss of the critical OH → N H-bond).
+The SPR detection limit depends on the protein concentration range tested. He et al. likely tested up to low micromolar concentrations. The key point is that binding was completely abolished, which our structural analysis explains (loss of the critical OH → N H-bond).
 
 ---
 
@@ -192,14 +192,14 @@ The SPR detection limit depends on the protein concentration range tested. Singh
 
 | Data Point | Type | Source |
 |-----------|------|--------|
-| PDB 7URV atom coordinates | Real experimental data | Cryo-EM, Singh et al. 2023 |
+| PDB 7URV atom coordinates | Real experimental data | Cryo-EM, He et al. 2023 |
 | Contact distances (Å) | Computed from real data | BioPython on PDB 7URV |
 | dSASA values (Å²) | Computed from real data | FreeSASA on PDB 7URV |
 | H-bond identification | Computed from real data | Distance criteria on PDB 7URV |
 | WT FMC63 KD = 5.1 nM | Real experimental data | SPR, Seigner et al. 2023 |
-| Y260A KD = no binding | Real experimental data | SPR, Singh et al. 2023 |
-| Y261A KD = 682.5 nM | Real experimental data | SPR, Singh et al. 2023 |
-| Y70A KD = 275.3 nM | Real experimental data | SPR, Singh et al. 2023 |
+| Y260A KD = no binding | Real experimental data | SPR, He et al. 2023 |
+| Y261A KD = 682.5 nM | Real experimental data | SPR, He et al. 2023 |
+| Y70A KD = 275.3 nM | Real experimental data | SPR, He et al. 2023 |
 | S214A prediction | **Computational prediction** | Based on burial + H-bond analysis |
 | Bar heights in Figure 1 | Computed from real data | FreeSASA (exact values) |
 | Contact maps in Figure 2 | Computed from real data | BioPython (exact distances) |
@@ -208,4 +208,4 @@ The SPR detection limit depends on the protein concentration range tested. Singh
 
 ---
 
-*Document prepared: 2026-04-27. All analysis on PDB 7URV. Experimental values from Singh et al. (2023) and Seigner et al. (2023).*
+*Document prepared: 2026-04-27. All analysis on PDB 7URV. Experimental values from He et al. (2023) and Seigner et al. (2023).*

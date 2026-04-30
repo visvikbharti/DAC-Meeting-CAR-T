@@ -31,11 +31,11 @@
 **Goal:** In silico alanine scanning or saturation mutagenesis of the FMC63-CD19 interface to predict which mutations at Tyr260, Tyr261, Ser214 will increase/decrease affinity.
 
 **Tasks:**
-1. Download PDB 7URV (FMC63-CD19 cryo-EM structure, Singh et al. 2023)
+1. Download PDB 7URV (FMC63-CD19 cryo-EM structure, He et al. 2023)
 2. Run computational alanine scanning using Rosetta or FoldX:
    - Calculate ddG (change in binding free energy) for all 20 amino acids at each position
    - Predict stabilizing vs. destabilizing mutations
-   - Compare predictions with published experimental data (Y260A, Y261A, Y70A from Singh 2023)
+   - Compare predictions with published experimental data (Y260A, Y261A, Y70A from He 2023)
 3. Generate a heatmap figure showing predicted ddG values
 4. Create document: `14_Computational_Validation.md`
 5. Add computational validation slide to PPT
@@ -120,7 +120,7 @@ Now let's tackle the remaining items:
 
 1. Computational validation — run in silico alanine scanning on FMC63-CD19
    (PDB 7URV) using Rosetta/FoldX or web servers. Compare predictions with
-   published Y260A/Y261A/Y70A data from Singh et al. 2023. Generate a
+   published Y260A/Y261A/Y70A data from He et al. 2023. Generate a
    heatmap figure.
 
 2. 4-1BB vs CD28 costimulation — deeper discussion of how costimulatory

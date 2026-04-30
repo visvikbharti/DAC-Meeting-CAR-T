@@ -563,9 +563,9 @@ add_title(slide, 'Citation correction — He et al. 2023 (NOT Singh)')
 add_subtitle(slide, 'PDB 7URV / Sci Immunol cryo-EM paper has first author Changhao He', Inches(1.0))
 
 # Two-column compare
-add_callout_box(slide, 'WRONG (current repo)\n\nSingh et al. 2023, Sci Immunol\n(used in 16 markdown files + slide deck)',
-                Inches(0.5), Inches(1.6), Inches(6.0), Inches(2.0),
-                fill_color=RED_ACCENT, font_size=14)
+add_callout_box(slide, 'WRONG (in earlier project notes)\n\nSingh et al. 2023, Sci Immunol\n\nWas in 16 markdown files. Corrected\n2026-05-01 via .fix_citations.py (84\nreplacements). DAC_Presentation_v2.pptx\nstill needs manual correction.',
+                Inches(0.5), Inches(1.6), Inches(6.0), Inches(2.5),
+                fill_color=RED_ACCENT, font_size=13)
 
 add_callout_box(slide, 'CORRECT (verified PubMed)\n\nHe C, Mansilla-Soto J, Khanra N, Hamieh M, Bustos V, Paquette AJ, Garcia Angus A, Shore DM, Rice WJ, Khelashvili G, Sadelain M, Meyerson JR.\n\nCD19 CAR antigen engagement mechanisms and affinity tuning.\n\nSci Immunol 8(81):eadf1426, 2023.\nPMID 36867678 | PMCID PMC10228544\nDOI 10.1126/sciimmunol.adf1426',
                 Inches(6.8), Inches(1.6), Inches(6.0), Inches(4.0),
@@ -582,7 +582,7 @@ add_bullets(slide, [
     'Laurent 2021 (SF-CD19): PMID 33843201 (ACS Synth Biol 10:1184-98) — first author Laurent, not Zajc',
 ], Inches(4.1), size=11, left=Inches(0.5), width=Inches(6.0))
 
-add_footer(slide, 'Action: find/replace "Singh et al. 2023" → "He et al. 2023" across 16 markdown files + slide deck. PMID, journal, DOI all unchanged.')
+add_footer(slide, 'Action: 16 markdown files corrected 2026-05-01. Manual correction of DAC_Presentation_v2.pptx still needed before DAC.')
 
 # =====================================================================
 # Slide 13: Summary recommendations

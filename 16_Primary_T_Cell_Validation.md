@@ -703,7 +703,7 @@ Donor 4 (Week 11-13): Repeat full panel (if n=4 donors planned)
 19. **Betts MR et al.** Methods Cell Biol. 2004;75:497-512. doi:10.1016/s0091-679x(04)75020-7
 20. **Grosser R et al.** Front Immunol. 2024;15:1315283. doi:10.3389/fimmu.2024.1315283
 21. **Seigner J et al.** Sci Rep. 2023;13:22173. doi:10.1038/s41598-023-48528-0. PMC10754921
-22. **Singh NK et al.** Sci Immunol. 2023;8(84):eadf1426. doi:10.1126/sciimmunol.adf1426. PMC10228544
+22. **He C et al.** Sci Immunol. 2023;8(84):eadf1426. doi:10.1126/sciimmunol.adf1426. PMC10228544
 
 ---
 

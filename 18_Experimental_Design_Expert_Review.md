@@ -597,17 +597,24 @@ This timeline assumes a single PhD student with technical support. It is achieva
 
 ---
 
-## 8. Citation corrections required in existing repo documents
+## 8. Citation corrections — applied 2026-05-01
 
-These are **errors to fix** in 16 markdown files and the slide deck before any DAC presentation. Each has been verified against PubMed.
+The following corrections have been **applied** to the repo via `.fix_citations.py` (84 replacements across 16 markdown files). Each was verified against PubMed.
 
-| Wrong (current repo) | Correct | Files affected |
+| Wrong (previous repo) | Correct | Status |
 |---|---|---|
-| "Singh et al. 2023" *Sci Immunol* (PDB 7URV) | **He C et al. 2023** *Sci Immunol* 8:eadf1426, **PMID 36867678** (full author list: He, Mansilla-Soto, Khanra, Hamieh, Bustos, Paquette, Garcia Angus, Shore, Rice, Khelashvili, Sadelain, Meyerson) | 16 files (see grep output) |
+| "Singh et al. 2023" *Sci Immunol* (PDB 7URV) | **He C et al. 2023** *Sci Immunol* 8:eadf1426, **PMID 36867678** (full author list: He, Mansilla-Soto, Khanra, Hamieh, Bustos, Paquette, Garcia Angus, Shore, Rice, Khelashvili, Sadelain, Meyerson) | ✅ Applied (84 replacements, 16 files) |
+| "Singh N, Frey NV, Engels B, et al." (hallucinated authors in `14_Computational_Validation.md`) | He C, Mansilla-Soto J, Khanra N, Hamieh M, et al. | ✅ Applied |
+| "Singh NK et al." (wrong initials in `16_Primary_T_Cell_Validation.md`) | He C et al. | ✅ Applied |
 | Drent 2019 cited correctly as *Clin Cancer Res* in repo | (no change) | — |
-| Nicholson 1997 PMID in earlier session memory | **PMID 9566763** (Nicholson IC et al., *Mol Immunol* 34:1157–65, 1997) | (memory file only — repo OK) |
+| Nicholson 1997 PMID in earlier session memory | **PMID 9566763** (Nicholson IC et al., *Mol Immunol* 34:1157–65, 1997) | ✅ Applied to memory file |
+| "Zajc 2021" for SF-CD19 (wrong first author from agent draft) | **Laurent E et al. 2021** *ACS Synth Biol* 10:1184–1198, PMID 33843201 | ✅ Already correct in this doc |
 
-The Singh→He correction is the single biggest item. The PI may have used "Singh" as verbal shorthand or there may be a prior preprint with different author order, but the published *Sci Immunol* paper (PMID 36867678, DOI 10.1126/sciimmunol.adf1426) has Changhao He as first author and Joel R Meyerson + Michel Sadelain as senior authors. This is exactly the kind of error the PI flagged previously and must be fixed before DAC.
+**Files NOT modified (intentional):**
+- `07_ET_Ratios_and_TimePoints.md` — contains a *different* paper "Selli ME, Landmann JH, Arveseth C, Singh N." 2023 *STAR Protocols* (PMC9826863) where Singh N is **senior author**, not first author. This is a real, verified, separate paper.
+- `18_Experimental_Design_Expert_Review.md` — this document, which intentionally discusses the Singh→He correction.
+
+**Slide deck (.pptx)**: not yet modified — slides created from scratch in `Experimental_Design_Reviewer_Slides.pptx` use correct attribution. The original `DAC_Presentation_v2.pptx` and `Computational_Validation_Presentation.pptx` may still contain "Singh" references and need manual correction or rebuild from the corrected build script.
 
 ---
 
@@ -634,7 +641,7 @@ All citations below have been directly web-verified against PubMed in this sessi
 - **Goodman DB** et al. *Sci Transl Med* 14(670):eabm1463, 2022. PMID **36350984**. CAR Pooling.
 - **He C** et al. *Sci Immunol* 8(81):eadf1426, 2023. PMID **36867678**. **CD19 CAR engagement / PDB 7URV / KD = 4.5 nM** — first author **He**, NOT Singh.
 - **Huang J** et al. *Nature* 464(7290):932–936, 2010. PMID **20357766**. 2D TCR-pMHC kinetics.
-- **Huppa JB** et al. *Nature* 463(7283):963–967, 2010. PMID **[needs verification]**. TCR-pMHC in situ kinetics.
+- **Huppa JB** et al. *Nature* 463(7283):963–967, 2010. PMID **20164930**. TCR-pMHC in situ kinetics (verified).
 - **Kawalekar OU** et al. *Immunity* 44(2):380–390, 2016. PMID **26885860**. 4-1BB Tcm/OXPHOS vs CD28 Tem/glycolysis.
 - **King MA** et al. *Clin Exp Immunol* 157(1):104–18, 2009. PMID **19426570**. NSG-PBMC xeno-GvHD model.
 - **Kivioja T** et al. *Nat Methods* 9(1):72–74, 2011. PMID **22101854**. UMIs.
@@ -642,9 +649,9 @@ All citations below have been directly web-verified against PubMed in this sessi
 - **LaFleur MW** et al. *Nat Commun* 10:1668, 2019. PMID **30971695**. CHIME in vivo CRISPR.
 - **Li W** et al. *Genome Biol* 15(12):554, 2014. PMID **25476604**. MAGeCK.
 - **Liu B, Chen W, Evavold BD, Zhu C.** *Cell* 157(2):357–368, 2014. PMID **24725404**. TCR catch bonds (BFP).
-- **Lugli E** et al. *Nat Protoc* 8(1):33–42, 2013. DOI 10.1038/nprot.2012.143. PMID **[needs verification]**. Tscm sorting protocol.
+- **Lugli E** et al. *Nat Protoc* 8(1):33–42, 2013. DOI 10.1038/nprot.2012.143. PMID **23222456**. Tscm sorting protocol (verified).
 - **Mackay LK** et al. *Nat Immunol* 14(12):1294–1301, 2013. PMID **24162776**. CD8 Trm developmental pathway.
-- **Mahnke YD** et al. *Eur J Immunol* 43(11):2797–2809, 2013. DOI 10.1002/eji.201343751. PMID **[needs verification]**. Memory T cell consensus markers.
+- **Mahnke YD** et al. *Eur J Immunol* 43(11):2797–2809, 2013. DOI 10.1002/eji.201343751. PMID **24258910**. Memory T cell consensus markers (verified).
 - **Majzner RG** et al. *Cancer Discov* 10(5):702–723, 2020. PMID **32193224**. CD19 antigen density threshold; CD28>4-1BB at low antigen.
 - **Milone MC** et al. *Mol Ther* 17(8):1453–64, 2009. PMID **19384291**. 4-1BB CAR + NALM-6 NSG.
 - **Nicholson IC** et al. *Mol Immunol* 34(16-17):1157–65, 1997. PMID **9566763**. Original FMC63 scFv.
@@ -662,7 +669,7 @@ All citations below have been directly web-verified against PubMed in this sessi
 - **Xu Y** et al. *Blood* 123(24):3750–9, 2014. PMID **24782509**. Tscm correlate with CAR-T expansion + persistence.
 - **Laurent E** et al. *ACS Synth Biol* 10(5):1184–1198, 2021. PMID **33843201**. SF-CD19 stabilized monomer for monovalent CAR interaction studies. Senior author Traxlmayr (same group as Seigner 2023). **(Note: this paper is sometimes misattributed to "Zajc"; first author is Laurent.)**
 
-**Tagged [needs verification]:** Huppa 2010, Lugli 2013, Mahnke 2013. Manpreet should resolve these PMIDs before any DAC slide use. (Web fetch in this session was rate-limited on full verification of these three; all are widely cited and almost certainly correct, but for the PI's standard, primary verification is required.)
+**All previously [needs verification] PMIDs were verified 2026-05-01**: Huppa 2010 → PMID 20164930; Lugli 2013 → PMID 23222456; Mahnke 2013 → PMID 24258910. Authors and titles confirmed against PubMed.
 
 ---
 

@@ -1734,7 +1734,7 @@ CAR-T cell function drops sharply below ~2,000 CD19 molecules/cell (Majzner et a
 | Study | Year | Method | KD (nM) | kon (M^-1 s^-1) | koff (s^-1) |
 |-------|------|--------|---------|-----------------|-------------|
 | Seigner et al. | 2023 | SPR (Biacore T200) | **5.1** | 1.0 x 10^5 | 5.3 x 10^-4 |
-| Singh et al. | 2023 | SPR | **4.5** | — | — |
+| He et al. | 2023 | SPR | **4.5** | — | — |
 | Various pre-2023 | — | Various | 0.3-47 | — | — |
 
 **Consensus:** FMC63 WT KD for CD19 = **2-6 nM** under optimized conditions. Published range of 0.3-47 nM reflects artifacts (ligand depletion, avidity, insufficient equilibration).
@@ -1773,7 +1773,7 @@ NNK library → Express/purify scFv → BLI screening → SPR (top hits) → Flo
 
 ### Binding Kinetics
 20. Seigner J et al. "Solving the mystery of the FMC63-CD19 affinity." *Sci Rep* 13:23024, 2023. PMC10754921. **VERIFIED**
-21. Singh N et al. "CD19 CAR antigen engagement mechanisms and affinity tuning." *Science Immunol* 8:eadf1426, 2023. PMC10228544. **VERIFIED**
+21. He C et al. "CD19 CAR antigen engagement mechanisms and affinity tuning." *Science Immunol* 8:eadf1426, 2023. PMC10228544. **VERIFIED**
 22. Huang J et al. "The kinetics of two-dimensional TCR and pMHC interactions determine T-cell responsiveness." *Nature* 464:932-936, 2010. PMC2925443. **VERIFIED**
 23. Galvez-Cancino et al. "Flow Cytometry-Based Method for Assessing CAR Cell Binding Kinetics." *Bio-protocol* 14(12):e5021, 2024. PMC11211074. **VERIFIED**
 

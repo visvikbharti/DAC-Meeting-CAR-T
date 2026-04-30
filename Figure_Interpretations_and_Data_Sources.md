@@ -366,9 +366,9 @@ If the PI asks to see the original figures, refer to the cited papers directly �
 
 ### Figure 10: fmc63_variant_affinities.png
 **What it shows:** Bar chart comparing published KD values for FMC63 wild-type and three alanine mutants at key contact residues.
-**Data source:** Singh et al., 2023, *Science Immunology* 8:eadf1426 (PMC10228544). WT KD confirmed by Seigner et al., 2023, *Sci Rep* 13:23024 (PMC10754921).
+**Data source:** He et al., 2023, *Science Immunology* 8:eadf1426 (PMC10228544). WT KD confirmed by Seigner et al., 2023, *Sci Rep* 13:23024 (PMC10754921).
 **Exact values plotted:**
-- FMC63 WT: KD = 5.1 nM (Seigner) / 4.5 nM (Singh) — plotted as 5.1 nM
+- FMC63 WT: KD = 5.1 nM (Seigner) / 4.5 nM (He) — plotted as 5.1 nM
 - FMC63-Y70A: KD = 275.3 nM (54-fold weaker)
 - FMC63-Y261A: KD = 682.5 nM (134-fold weaker)
 - FMC63-Y260A: No detectable SPR binding — plotted as >5000 nM (lower bound)

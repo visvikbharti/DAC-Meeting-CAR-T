@@ -169,7 +169,7 @@ Same as SPR: **ka (kon), kd (koff), KD** from real-time binding sensorgrams fitt
 **UNCERTAINTY FLAG:** Specific Octet pricing is not publicly listed by Sartorius; estimates above are based on used equipment listings and industry sources. Contact Sartorius for exact quotes.
 
 ### Published FMC63-CD19 BLI Data
-**No published studies were found that specifically measured FMC63-CD19 kinetics using BLI/Octet.** The major FMC63-CD19 kinetics studies (Seigner et al., 2023; Singh et al., 2023) used SPR (Biacore). BLI has been used for other antibody-antigen systems, but specific FMC63-CD19 BLI data could not be verified in published literature.
+**No published studies were found that specifically measured FMC63-CD19 kinetics using BLI/Octet.** The major FMC63-CD19 kinetics studies (Seigner et al., 2023; He et al., 2023) used SPR (Biacore). BLI has been used for other antibody-antigen systems, but specific FMC63-CD19 BLI data could not be verified in published literature.
 
 ---
 
@@ -520,9 +520,9 @@ The FMC63 scFv is the most widely used binder in approved CD19-targeting CAR T p
 3. **Avidity effects** from scFv dimerization or multivalent display -- overestimates affinity
 4. **CD19 oligomerization** when using tagged/fusion constructs -- overestimates affinity
 
-#### Key Study 2: Singh et al. (2023) Science Immunology
+#### Key Study 2: He et al. (2023) Science Immunology
 
-**Citation:** Singh N et al. "CD19 CAR antigen engagement mechanisms and affinity tuning." Science Immunology 8:eadf1426 (2023). DOI: 10.1126/sciimmunol.adf1426. PMID: 36867678. PMC10228544.
+**Citation:** He C et al. "CD19 CAR antigen engagement mechanisms and affinity tuning." Science Immunology 8:eadf1426 (2023). DOI: 10.1126/sciimmunol.adf1426. PMID: 36867678. PMC10228544.
 
 **Method:** SPR (instrument not specified in search results; likely Biacore)
 **CD19 construct:** Soluble CD19 ectodomain
@@ -555,11 +555,11 @@ This study also solved cryo-EM structures of FMC63-CD19 (PDB: 7URV) and SJ25C1-C
 | Study | Year | Method | KD (nM) | Notes |
 |-------|------|--------|---------|-------|
 | Seigner et al. | 2023 | SPR (Biacore T200) | **5.1** (range: 2-6) | Optimized, tag-free monomeric CD19; most rigorous |
-| Singh et al. | 2023 | SPR | **4.5** | Cryo-EM guided study |
+| He et al. | 2023 | SPR | **4.5** | Cryo-EM guided study |
 | Various earlier studies | Pre-2023 | Various (SPR, flow cytometry) | **0.3 to 47** | Artifacts: ligand depletion, avidity, insufficient equilibration |
 | Seigner et al. (flow cytometry) | 2023 | Flow cytometry | 0.22-1.8 | Demonstrating artifacts |
 
-**Consensus:** FMC63 wild-type KD for CD19 is approximately **2-6 nM** by SPR under optimized conditions. The value of 5.1 nM (Seigner et al., 2023) and 4.5 nM (Singh et al., 2023) are the most reliable published values.
+**Consensus:** FMC63 wild-type KD for CD19 is approximately **2-6 nM** by SPR under optimized conditions. The value of 5.1 nM (Seigner et al., 2023) and 4.5 nM (He et al., 2023) are the most reliable published values.
 
 **VERIFICATION STATUS for user query:** "Guedan et al. 2023 reported FMC63 KD of 2-6 nM by SPR" -- The 2-6 nM range is correct, but the first author is **Seigner, not Guedan**. The full citation is Seigner et al. (2023) Scientific Reports 13:23024. Traxlmayr is the corresponding/senior author. The paper is from the University of Natural Resources and Life Sciences, Vienna, Austria.
 
@@ -630,7 +630,7 @@ If budget or access constraints limit to a single platform, SPR (Biacore T200) i
 | Claim | Verified? | Source |
 |-------|-----------|--------|
 | FMC63-CD19 KD = 5.1 nM by SPR | **YES** | Seigner et al. (2023) Sci Rep 13:23024, PMC10754921 |
-| FMC63-CD19 KD = 4.5 nM by SPR | **YES** | Singh et al. (2023) Science Immunology 8:eadf1426, PMC10228544 |
+| FMC63-CD19 KD = 4.5 nM by SPR | **YES** | He et al. (2023) Science Immunology 8:eadf1426, PMC10228544 |
 | FMC63-CD19 KD range 2-6 nM (optimized) | **YES** | Seigner et al. (2023) |
 | Published KD range 0.3-47 nM (with artifacts) | **YES** | Seigner et al. (2023) |
 | kon = 1.0 x 10^5 M^-1 s^-1 | **YES** | Seigner et al. (2023) |
@@ -642,7 +642,7 @@ If budget or access constraints limit to a single platform, SPR (Biacore T200) i
 | No published BLI data for FMC63-CD19 | **LIKELY TRUE** | Search found no BLI-specific FMC63-CD19 study |
 | NanoTemper Monolith cost ~$136K | **YES** | NIH grant S10-OD021483 |
 | Biacore T200 new cost $200K-$300K | **ESTIMATED** | Multiple sources; Excedr blog; NIH grants |
-| Singh et al. cryo-EM structures PDB 7URV | **YES** | RCSB PDB; Singh et al. (2023) |
+| He et al. cryo-EM structures PDB 7URV | **YES** | RCSB PDB; He et al. (2023) |
 | "Guedan et al." attribution | **INCORRECT** | Correct first author is Seigner, not Guedan |
 | CSIR-IGIB SPR availability | **UNVERIFIED** | Could not confirm from web sources |
 
@@ -653,7 +653,7 @@ If budget or access constraints limit to a single platform, SPR (Biacore T200) i
 1. **Seigner J, Zajc CU, Dotsch S, et al.** "Solving the mystery of the FMC63-CD19 affinity." *Scientific Reports* 13:23024 (2023). DOI: 10.1038/s41598-023-48528-0. PMID: 38155191. PMC10754921.
    - URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10754921/
 
-2. **Singh N, et al.** "CD19 CAR antigen engagement mechanisms and affinity tuning." *Science Immunology* 8:eadf1426 (2023). DOI: 10.1126/sciimmunol.adf1426. PMID: 36867678. PMC10228544.
+2. **He C, et al.** "CD19 CAR antigen engagement mechanisms and affinity tuning." *Science Immunology* 8:eadf1426 (2023). DOI: 10.1126/sciimmunol.adf1426. PMID: 36867678. PMC10228544.
    - URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC10228544/
 
 3. **Huang J, Zarnitsyna V, Liu B, et al.** "The kinetics of two-dimensional TCR and pMHC interactions determine T-cell responsiveness." *Nature* 464:932-936 (2010). PMID: 20357766. PMC2925443.

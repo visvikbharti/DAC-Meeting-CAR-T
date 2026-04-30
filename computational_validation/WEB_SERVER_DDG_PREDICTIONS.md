@@ -19,7 +19,7 @@ Before using any prediction tool, convert the published experimental KD values t
 | Y261A | 682.5 | -8.41 | **+2.96** | Hotspot (>2.0) |
 | Y260A | No binding | — | **>>+4.0** | Critical hotspot |
 
-*KD source: Singh et al., 2023, Science Immunology (PMC10228544)*
+*KD source: He et al., 2023, Science Immunology (PMC10228544)*
 
 **Convention:** ddG > 2.0 kcal/mol = hotspot; ddG > 1.0 kcal/mol = warm spot; ddG < 1.0 = neutral
 
