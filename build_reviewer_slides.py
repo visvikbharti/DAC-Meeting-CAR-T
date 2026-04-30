@@ -16,8 +16,10 @@ Slides covered:
  10. SPR protocol (Seigner 2023 parameters)
  11. Tiered biophysics: BLI -> SPR -> 2D -> BFP
  12. Citation correction: He et al. 2023 (NOT Singh)
- 13. Summary recommendations table
- 14. References
+ 13. Aims & Objectives — current state + issues
+ 14. Aims & Objectives — reformulated + 4-aim structure
+ 15. Summary recommendations table
+ 16. References
 """
 from pptx import Presentation
 from pptx.util import Inches, Pt, Emu
@@ -585,7 +587,78 @@ add_bullets(slide, [
 add_footer(slide, 'Action: 16 markdown files corrected 2026-05-01. Manual correction of DAC_Presentation_v2.pptx still needed before DAC.')
 
 # =====================================================================
-# Slide 13: Summary recommendations
+# Slide 13: Aims & Objectives — current state + issues
+# =====================================================================
+slide = prs.slides.add_slide(BLANK)
+add_title(slide, 'Aims & Objectives — currently stated, with issues')
+add_subtitle(slide, 'Both questions are partially answered by published literature; objectives don\'t capture what the experiments measure', Inches(1.0))
+
+# Current Q1/O1 box
+add_callout_box(slide,
+    'Q1 (current):\nCan tuning the affinity affect the amplitude of the CAR-T signal?\n\nObjective 1 (current):\nTo determine CAR-T cell efficacy in vivo and in vitro using scFv mutant CAR library.',
+    Inches(0.4), Inches(1.45), Inches(6.2), Inches(2.0),
+    fill_color=BLUE_LIGHT, font_color=DARK_GRAY, font_size=12, bold=False)
+
+# Current Q2/O2 box
+add_callout_box(slide,
+    'Q2 (current):\nIs there any affinity window for CAR-T cells having better therapeutic outcomes?\n\nObjective 2 (current):\nTo do biophysical characterization of scFv mutants which performed better in vivo as well as in vitro.',
+    Inches(6.7), Inches(1.45), Inches(6.2), Inches(2.0),
+    fill_color=BLUE_LIGHT, font_color=DARK_GRAY, font_size=12, bold=False)
+
+# Issues table
+issues_data = [
+    ['#', 'Issue', 'Why it matters'],
+    ['Q1', 'Binary question; "yes" already answered by Liu 2015, Caruso 2015, Drent 2019, Ghorashian 2019, He 2023, Mao 2022', 'DAC will ask: what\'s the open question?'],
+    ['Q1', '"Amplitude of CAR-T signal" ambiguous (proximal? effector? exhaustion?)', 'Objective should specify'],
+    ['Q1↔O1', 'Q asks signal; O measures efficacy. "Efficacy" undefined.', 'Mismatch + vagueness'],
+    ['O1', 'Doesn\'t reflect what\'s measured (activation, exhaustion, memory, antigen density, NGS readout)', 'Plan ≠ stated objective'],
+    ['Q2', 'Mao 2022 (PMID 36325345) already identifies clinical optimal 10–60 nM window; Ghorashian 2019 showed low-affinity wins', 'Novelty must be reframed'],
+    ['Q2', 'Misses dwell time / koff axis, 2D kinetics, catch bonds — the genuine novelty', 'These are unprecedented for any CAR'],
+    ['O2', '"Mutants which performed better" — circular; biophysics IS what defines the window', 'Logical sequence problem'],
+    ['O2', 'Should span full functional spectrum (incl. underperformers) to define a window', 'Otherwise it\'s just a hit list'],
+]
+add_table(slide, issues_data, Inches(3.6), Inches(0.4), SW - Inches(0.8), Inches(3.7), font_size=10)
+
+add_footer(slide, 'Source: doc 19 §1, §2.')
+
+# =====================================================================
+# Slide 14: Aims & Objectives — reformulated + 4-aim structure
+# =====================================================================
+slide = prs.slides.add_slide(BLANK)
+add_title(slide, 'Aims & Objectives — reformulated + 4-aim structure')
+add_subtitle(slide, 'Reframes Q1/Q2 as quantitative mapping problems; surfaces computational + memory + 2D kinetics novelty', Inches(1.0))
+
+# Reformulated Q1+O1 box
+add_callout_box(slide,
+    'Q1 (reformulated):\nHow does FMC63 scFv binding affinity quantitatively shape CAR-T activation, effector function, exhaustion, and memory formation, and does this depend on antigen density?\n\nObjective 1: Map activation kinetics, exhaustion trajectory, cytotoxic function, and memory across the variant library in NALM-6 (graded CD19) + NSG xenograft, sort-then-NGS readout.',
+    Inches(0.4), Inches(1.45), Inches(6.2), Inches(2.4),
+    fill_color=GREEN_ACCENT, font_size=11)
+
+# Reformulated Q2+O2 box
+add_callout_box(slide,
+    'Q2 (reformulated):\nWhich kinetic parameter (KD, kon, koff, dwell time, 2D koff, catch-bond lifetime) best predicts CAR-T function, and what is the optimal kinetic window?\n\nObjective 2: Characterize a panel spanning the full functional spectrum by SPR (3D) + 2D micropipette adhesion frequency (novel for any CAR). Statistically correlate kinetic parameters with functional readouts.',
+    Inches(6.7), Inches(1.45), Inches(6.2), Inches(2.4),
+    fill_color=GREEN_ACCENT, font_size=11)
+
+# 4-aim structure table
+aim_data = [
+    ['Aim', 'Title', 'Maps to'],
+    ['1', 'Library design + computational validation (PDB 7URV, mCSM-AB2; NNK at S214, Trp212, Y260, Y261)', 'Already done'],
+    ['2', 'Functional mapping in vitro + in vivo (activation/exhaustion/memory across library; sort-then-NGS)', 'Q1 / Obj 1'],
+    ['3', 'Biophysical characterization + kinetic-functional correlation (SPR + 2D adhesion frequency)', 'Q2 / Obj 2'],
+    ['4 (optional)', 'Translational validation (primary T cells; NSG-MHC-DKO persistence + memory recall)', 'Stretch goal'],
+]
+add_table(slide, aim_data, Inches(4.1), Inches(0.4), SW - Inches(0.8), Inches(2.3), font_size=11)
+
+add_callout_box(slide,
+    'Pitch: "First systematic dataset linking ~376 FMC63 variants to full functional matrix (activation/exhaustion/memory/persistence) and multi-parameter kinetic dataset (3D + 2D + force-dependent), defining the kinetic-function relationship for anti-CD19 CAR-T therapy."',
+    Inches(6.5), Inches(0.4), SW - Inches(0.8), Inches(0.85),
+    fill_color=NAVY, font_size=12)
+
+add_footer(slide, 'Source: doc 19 §3, §4, §6.')
+
+# =====================================================================
+# Slide 15: Summary recommendations
 # =====================================================================
 slide = prs.slides.add_slide(BLANK)
 add_title(slide, 'Summary — prioritized recommendations')
@@ -611,7 +684,7 @@ add_table(slide, rec_data, Inches(0.45), Inches(0.4), SW - Inches(0.9), Inches(5
 add_footer(slide, 'Source: doc 18 §7. Full master reference list: doc 18 §9.')
 
 # =====================================================================
-# Slide 14: References
+# Slide 16: References
 # =====================================================================
 slide = prs.slides.add_slide(BLANK)
 add_title(slide, 'Verified references (PubMed-confirmed)')

@@ -688,7 +688,59 @@ All citations below have been directly web-verified against PubMed in this sessi
 
 ---
 
-## 11. What this review IS and IS NOT
+## 11. Aims and objectives — critique and proposed reframing
+
+A standalone version of this section is in `19_Aims_and_Objectives_Reframing.md`. Summary below.
+
+### 11.1 Currently stated (Manpreet's two-objective version)
+
+> **Q1**: Can tuning the affinity affect the amplitude of the CAR-T signal?
+> **Objective 1**: To determine CAR-T cell efficacy in vivo and in vitro using scFv mutant CAR library.
+>
+> **Q2**: Is there any affinity window for CAR-T cells having better therapeutic outcomes?
+> **Objective 2**: To do biophysical characterization of scFv mutants which performed better in vivo as well as in vitro.
+
+### 11.2 Issues a DAC reviewer will raise
+
+**Q1 / Objective 1:**
+- Q1 is binary (can/can't); already answered "yes" by published literature (Liu 2015, Caruso 2015, Drent 2019, Ghorashian 2019, He 2023, Mao 2022).
+- "Amplitude of the CAR-T signal" is ambiguous (proximal signaling? effector function? exhaustion?).
+- Q1 ↔ Objective 1 mismatch: Q asks about *signal*, objective measures *efficacy*.
+- "Efficacy" undefined.
+- Doesn't reflect what's measured (activation kinetics, exhaustion markers, memory subsets, antigen-density dependence).
+
+**Q2 / Objective 2:**
+- Q2 partially answered: Mao 2022 *Front Immunol* PMID 36325345 already identified clinical optimal window 10–60 nM; Ghorashian 2019 PMID 31477906 showed low-affinity CAT CAR clinically outperformed FMC63.
+- "Therapeutic outcomes" undefined.
+- Misses the genuine novelty: dwell time / koff as a separate axis, 2D vs 3D kinetics (no published CAR data), catch bonds (no published CAR data).
+- **Logical sequence problem**: "mutants which performed better" — but biophysics IS what defines what "performed better" means in a kinetic-functional sense. Restricting biophysics to good performers is circular.
+
+### 11.3 Reformulated questions and objectives
+
+> **Question 1 (reformulated)**: How does FMC63 scFv binding affinity quantitatively shape CAR-T cell activation, effector function, exhaustion, and memory formation, and does this relationship depend on antigen density?
+>
+> **Objective 1 (reformulated)**: To map activation kinetics (CD69, CD25, IFN-γ at 24/48/96 h), exhaustion trajectory (PD-1, TIM-3, LAG-3, TOX), cytotoxic function, and memory formation across a panel of FMC63 scFv affinity variants in NALM-6 co-culture (with graded CD19 density) and NALM-6/NSG xenograft models, with sort-then-NGS readout.
+>
+> **Question 2 (reformulated)**: Within the FMC63-CD19 binding spectrum, which kinetic parameter (KD, kon, koff, dwell time, 2D koff, catch-bond lifetime) best predicts CAR-T cell function, and what is the optimal kinetic window that maximizes durable anti-tumor activity while preserving memory formation?
+>
+> **Objective 2 (reformulated)**: To biophysically characterize a representative panel of FMC63 scFv variants spanning the full functional spectrum (high-performers, intermediates, low-performers, near-WT controls) by SPR (3D KD, kon, koff, dwell time) and 2D micropipette adhesion frequency (membrane-context kinetics; novel for any CAR system); statistically correlate kinetic parameters with in vitro and in vivo functional readouts to define the optimal window.
+
+### 11.4 Proposed 3–4 aim structure
+
+| Aim | Title | Maps to |
+|---|---|---|
+| **Aim 1** | Library design + computational validation: identify and computationally validate critical scFv contact residues (PDB 7URV, He et al. 2023) using structural analysis and mCSM-AB2; design NNK saturation library at S214, Trp212 (novel) + Y260, Y261. | Already largely done |
+| **Aim 2** | Functional mapping in vitro and in vivo: characterize activation, effector, exhaustion, memory across the affinity variant library in NALM-6 co-culture (graded CD19) and NALM-6/NSG xenograft, sort-then-NGS readout. | Q1 / Objective 1 (reformulated) |
+| **Aim 3** | Biophysical characterization + kinetic-functional correlation: SPR + 2D micropipette adhesion frequency; statistically correlate kinetic parameters with functional readouts. | Q2 / Objective 2 (reformulated) |
+| **Aim 4** (optional, translational) | Validate top variants in primary T cells; assess persistence + memory recall in NSG-MHC-DKO. | Stretch goal |
+
+### 11.5 One-paragraph executive pitch (DAC opening)
+
+> "Most published CAR-affinity studies test 2–5 variants and a single readout. My thesis builds the first systematic dataset linking ~376 FMC63 scFv variants to a full functional matrix — activation, exhaustion, memory, persistence — across in vitro and in vivo models, and to a multi-parameter kinetic dataset (3D + 2D + force-dependent), to define which kinetic parameter best predicts CAR-T cell function and the optimal window for anti-CD19 therapy. Two of the four mutated positions (S214, Trp212) have never been mutated in any published study; the 2D adhesion frequency and catch-bond data have never been published for any CAR-antigen system."
+
+---
+
+## 12. What this review IS and IS NOT
 
 **This review IS:**
 - An expert critique of the proposed experimental design with verified PubMed citations.
