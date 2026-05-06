@@ -59,9 +59,11 @@
 ### Slide 7: Optimal Dwell Time
 
 **Narration:**
-"This figure illustrates the 'Goldilocks' concept of optimal dwell time. The bell-shaped curve shows that T cell activation peaks at an intermediate dwell time and declines on either side. Kalergis et al. in their 2001 Nature Immunology paper demonstrated this quantitatively: TCR-pMHC complexes with half-lives less than or equal to 10.3 seconds failed to efficiently kill targets, those with half-lives of 77 seconds also showed impaired function, but complexes with intermediate half-lives of about 34 seconds showed maximum cytotoxic activity. This creates a tension between kinetic proofreading, which needs longer dwell times, and serial engagement, which needs shorter dwell times — the optimal lies in between."
+"This figure illustrates the 'Goldilocks' concept of optimal dwell time. The conceptual framework — that T cell activation is impaired when t½ is either too short or too long — was first demonstrated by Kalergis and colleagues in their 2001 *Nature Immunology* paper, using the BM3.3 TCR system with t½ values measured by tetramer dissociation in *minutes*. The numerical t½ values shown on the slide come from a separate, more directly comparable panel: the OT-I TCR with the SIINFEKL/OVA peptide and altered peptide ligands, measured by SPR at 25 °C. Those values — compiled in Carreño et al. 2007 *Immunology* Table 1 from primary measurements in Alam 1999 and Rosette 2001 — span K4 <3.5 s (null), E1 10.3 s (weak/antagonist), OVA 33 s and A2 34.7 s (agonists), and G4 77 s (weak agonist with reduced IFN-γ). Together these data illustrate the tension between kinetic proofreading, which needs longer dwell times, and serial engagement, which needs shorter dwell times — the optimal lies in between."
 
-**Figure source:** Bell-shaped curve is illustrative. Quantitative data points (10.3s, 34s, 77s) from Kalergis et al., 2001, Nat Immunol 2:229-234.
+**Figure source:** Data points (3.5, 10.3, 33, 34.7, 77 s) — Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. *Immunology*. 2007;121(2):227-237 (PMID 17313485, PMC2265936); primary measurements Alam 1999 *Immunity* + Rosette 2001 *Immunity* (PMID 11485738). Trend curve is illustrative. Conceptual framework: Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. *Nat Immunol*. 2001;2(3):229-234 (PMID 11224522).
+
+**Important caveat to mention if asked:** Earlier drafts of this slide attributed the seconds-scale t½ values directly to Kalergis 2001 — that attribution is wrong. Kalergis 2001 used a different TCR (BM3.3) with t½ measured in *minutes* by tetramer dissociation. The seconds-scale values shown here are from the OT-I/OVA panel.
 
 ---
 

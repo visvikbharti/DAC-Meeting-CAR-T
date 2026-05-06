@@ -99,41 +99,99 @@ def fig_affinity_windows():
     save(fig, 'affinity_windows')
 
 # === Figure 3: Optimal Dwell Time ===
+# CONCEPT origin: Kalergis et al., 2001 Nat Immunol 2(3):229-234 (PMID 11224522).
+#   That paper used the BM3.3 TCR / Kb / pBM1 system AND a Kd-restricted CTL clone,
+#   with half-lives measured by tetramer dissociation in MINUTES (NOT seconds).
+# DATA POINTS plotted below (10.3 s, 33 s, 34.7 s, 77 s, <3.5 s) are from a DIFFERENT
+#   study panel: OT-I TCR / SIINFEKL (OVA) + variants, measured by SPR at 25°C in seconds.
+#   These values are compiled in Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM.
+#   Immunology 2007;121(2):227-237 Table 1 (PMID 17313485, PMC2265936), with primary
+#   measurements originally from Alam SM et al. Immunity 1999;10:227-237 and
+#   Rosette C, Werlen G, Daniels MA et al. Immunity 2001;15(1):59-70 (PMID 11485738).
 def fig_optimal_dwell():
-    fig, ax = plt.subplots(figsize=(10, 7))
-    t = np.linspace(0, 130, 500)
-    activation = t**1.8 * np.exp(-t / 25)
-    activation = activation / activation.max() * 2.9
+    fig, ax = plt.subplots(figsize=(11, 7.5))
 
-    ax.fill_between(t, 0, 3.0, where=(t < 10), color='#ffcccc', alpha=0.4)
-    ax.fill_between(t, 0, 3.0, where=((t >= 10) & (t < 55)), color='#ccffcc', alpha=0.4)
-    ax.fill_between(t, 0, 3.0, where=(t >= 55), color='#fff3cc', alpha=0.4)
+    # Published data points (Carreño 2007 Table 1, OT-I/H-2Kb, 25°C, SPR)
+    # Phenotype: agonist (productive activation) vs weak/null
+    data = [
+        ('K4',  3.5,  'null',          '#888888'),
+        ('E1',  10.3, 'weak/antagonist','#cc4444'),
+        ('OVA', 33.0, 'agonist',       '#2e7d32'),
+        ('A2',  34.7, 'agonist',       '#2e7d32'),
+        ('G4',  77.0, 'weak agonist',  '#cc8800'),
+    ]
 
-    ax.plot(t, activation, 'b-', linewidth=3)
-    ax.axvline(x=34, color='green', linestyle='--', linewidth=1.5)
-    ax.text(36, 2.6, 'Optimal t½ ≈ 34 s\n(Kalergis et al., 2001)',
-            fontsize=11, fontweight='bold', color='darkgreen')
+    # Background zones reflecting the qualitative interpretation in Carreño 2007 +
+    # Kalergis 2001 conceptual framework: too-fast koff = no proofreading;
+    # intermediate = optimal; too-slow koff = serial engagement impaired.
+    ax.axvspan(0, 12, color='#ffcccc', alpha=0.35, label='_nolegend_')
+    ax.axvspan(12, 55, color='#ccffcc', alpha=0.35, label='_nolegend_')
+    ax.axvspan(55, 130, color='#fff3cc', alpha=0.35, label='_nolegend_')
 
-    ax.text(3, 2.85, 'No kinetic\nproofreading\ncompleted', fontsize=8.5, fontstyle='italic',
-            color='red', ha='center', va='top',
-            bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.7, edgecolor='none'))
-    ax.text(100, 1.6, 'Serial engagement\nblocked', fontsize=8.5, fontstyle='italic',
-            color='#996600', ha='center', va='center',
-            bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.7, edgecolor='none'))
+    # Plot the published t1/2 values as data points on a relative-activation axis
+    # (relative activation values are SCHEMATIC ranks reflecting reported phenotypes,
+    # not numerical values from the paper - axis labelled accordingly).
+    rel_activation = {3.5: 0.1, 10.3: 0.4, 33.0: 2.7, 34.7: 2.85, 77.0: 1.4}
+    # Custom label offsets to avoid OVA/A2 overlap (both ~34 s)
+    label_offsets = {
+        3.5:  (-9, -0.40),
+        10.3: (-2, -0.55),
+        33.0: (-12, 0.25),
+        34.7: (10, 0.25),
+        77.0: (0, 0.35),
+    }
+    for name, t12, phen, color in data:
+        y = rel_activation[t12]
+        ax.plot(t12, y, 'o', color=color, markersize=13, markeredgecolor='black',
+                markeredgewidth=1.2, zorder=5)
+        dx, dy = label_offsets[t12]
+        ha = 'center' if abs(dx) < 5 else ('right' if dx < 0 else 'left')
+        ax.annotate(f'{name}\nt½ = {t12} s\n({phen})',
+                    xy=(t12, y), xytext=(t12 + dx, y + dy),
+                    fontsize=8.5, fontweight='bold', ha=ha,
+                    color=color,
+                    arrowprops=dict(arrowstyle='-', color=color, lw=0.6, alpha=0.5))
 
-    ax.set_xlabel('TCR-pMHC Dwell Time / Half-life (seconds)', fontsize=13)
-    ax.set_ylabel('T Cell Activation (Relative)', fontsize=13)
-    ax.set_title('The Optimal Dwell Time ("Goldilocks") Concept',
-                 fontsize=14, fontweight='bold')
+    # Illustrative dashed curve through the trend (NOT a fit; clearly schematic)
+    t = np.linspace(0, 130, 400)
+    illus = t**1.8 * np.exp(-t / 25)
+    illus = illus / illus.max() * 2.85
+    ax.plot(t, illus, 'b--', linewidth=1.5, alpha=0.45,
+            label='Illustrative trend (not a fit)')
+
+    ax.text(6, 2.85, 'Below threshold\nfor productive\nT cell activation',
+            fontsize=8.5, fontstyle='italic', color='#aa0000', ha='center', va='top',
+            bbox=dict(boxstyle='round,pad=0.25', facecolor='white', alpha=0.85,
+                      edgecolor='none'))
+    ax.text(95, 2.4, 'Extended t½ →\nreduced IFN-γ\n(Carreño 2007)',
+            fontsize=8.5, fontstyle='italic', color='#996600', ha='center', va='center',
+            bbox=dict(boxstyle='round,pad=0.25', facecolor='white', alpha=0.85,
+                      edgecolor='none'))
+
+    ax.set_xlabel('TCR-pMHC Half-life t½ at 25 °C (seconds, SPR)', fontsize=12)
+    ax.set_ylabel('Relative T Cell Activation (schematic ranking)', fontsize=12)
+    ax.set_title('Optimal Dwell-Time ("Goldilocks") Concept\n'
+                 'OT-I / H-2Kb panel: agonist activation across t½ range',
+                 fontsize=13, fontweight='bold')
     ax.set_xlim(0, 130)
-    ax.set_ylim(0, 3.0)
+    ax.set_ylim(0, 3.3)
+    ax.legend(fontsize=9, loc='upper right')
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
-    fig.text(0.12, 0.01,
-             'Based on: Kalergis AM et al., Nat Immunol. 2001;2(3):229-234.\n'
-             'Data: t½ ≤10.3s (no killing), 34s (max killing), 77s (impaired). '
-             'Bell-shaped curve is illustrative.',
-             fontsize=7.5, color='gray', va='bottom')
+
+    fig.text(0.07, 0.005,
+             'Data points (t½ values, OT-I + OVA peptide variants, SPR @ 25 °C):\n'
+             '  Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM.\n'
+             '  Immunology. 2007;121(2):227-237 (Table 1). PMID 17313485, PMC2265936.\n'
+             '  Primary measurements: Alam SM et al. Immunity 1999;10:227 and Rosette C et al.\n'
+             '  Immunity 2001;15(1):59 (PMID 11485738).\n'
+             'Conceptual framework (optimal-dwell-time/Goldilocks): Kalergis AM, Boucheron N,\n'
+             '  Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG.\n'
+             '  Nat Immunol. 2001;2(3):229-234 (PMID 11224522). NB: Kalergis 2001 used the\n'
+             '  BM3.3 TCR system with t½ values reported in MINUTES — not the OT-I seconds-scale\n'
+             '  data plotted here.',
+             fontsize=6.5, color='#444444', va='bottom', linespacing=1.4)
+    plt.subplots_adjust(bottom=0.30)
     save(fig, 'optimal_dwell_time')
 
 fig_catch_slip()

@@ -47,7 +47,7 @@ Functional Outcome (activation, exhaustion, memory, cytotoxicity)
 The dissociation rate (koff) is a better predictor of T cell activation than equilibrium affinity (KD). This is because T cell signaling depends on temporal parameters (how long the bond lasts, whether it survives kinetic proofreading checkpoints) rather than equilibrium occupancy (Hebeisen et al., 2017, *JCI Insight* 2:e92570).
 
 **Principle 2: There exists an optimal dwell time.**
-Neither too short nor too long. Intermediate half-life (~34 seconds for CD8+ T cells) maximizes T cell function by balancing kinetic proofreading completion against serial engagement (Kalergis et al., 2001, *Nat Immunol* 2:229-234).
+Neither too short nor too long. Intermediate t½ (~33-35 s for the OT-I/OVA agonist panel at 25 °C SPR; data compiled in Carreño 2007 *Immunology* 121:227-237 Table 1, primary measurements Alam 1999 *Immunity* + Rosette 2001 *Immunity*) maximizes T cell function by balancing kinetic-proofreading completion against serial engagement. The conceptual framework was first laid out by **Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG.** *Nat Immunol* 2001;2(3):229-234 (PMID 11224522), using the BM3.3 TCR system with t½ measured by tetramer dissociation in **minutes** (not seconds).
 
 **Principle 3: Mechanical force discriminates agonists from antagonists.**
 Under physiological piconewton forces, agonist pMHC forms catch bonds (bond strengthens) while antagonist pMHC forms slip bonds (bond weakens). This force-dependent behavior is a better discriminator than zero-force affinity (Liu et al., 2014, *Cell* 157:357-368).
@@ -119,7 +119,8 @@ The project plan to characterize selected mutants by SPR or BLI is well-justifie
 | TCR-pMHC KD (CD4+ average) | 52 +/- 33 microM | Aleksic et al., 2007 |
 | kon range | 600 - 400,000 M-1 s-1 | Stone et al., 2009 |
 | koff range | 0.009 - 0.975 s-1 | Stone et al., 2009 |
-| Optimal dwell time (t1/2) | ~34 seconds (CD8+ T cells) | Kalergis et al., 2001 |
+| OT-I OVA agonist t½ | 33 s (OVA), 34.7 s (A2) | Carreño et al., 2007 (Table 1; primary data Alam 1999, Rosette 2001) |
+| Optimal-dwell-time concept | Bell-shaped activation vs t½ (BM3.3 system, *minute* timescale) | Kalergis et al., 2001 |
 
 ### 3.2 Thymic Selection Thresholds
 
@@ -232,7 +233,8 @@ The following landmark references have been independently verified through web s
 6. Hebeisen M, et al. TCR-ligand dissociation rate is a robust and stable biomarker of CD8+ T cell potency. *JCI Insight*. 2017;2(14):e92570. **VERIFIED**
 
 ### Optimal Dwell Time
-7. Kalergis AM, et al. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234. **VERIFIED**
+7. Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234. **PMID 11224522. VERIFIED 2026-05-06.**
+7a. Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. The half-life of the T-cell receptor/peptide-major histocompatibility complex interaction can modulate T-cell activation in response to bacterial challenge. *Immunology*. 2007;121(2):227-237. **PMID 17313485; PMC2265936.** (Source of OT-I OVA-panel t½ values in *seconds*.)
 
 ### Mechanical Forces and Catch Bonds
 8. Liu B, Chen W, Evavold BD, Zhu C. Accumulation of dynamic catch bonds between TCR and agonist peptide-MHC triggers T cell signaling. *Cell*. 2014;157(2):357-368. **VERIFIED** --- PubMed ID: 24725404

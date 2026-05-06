@@ -46,9 +46,18 @@ koff too fast           koff just right      koff too slow
 (<< 1 sec dwell)        (~1-30 sec dwell)    (>> 30 sec dwell)
 ```
 
-**Key evidence:** Kalergis et al. (2001) demonstrated that neither low (less than or equal to 10.3 sec) nor high (77 sec) half-life TCR-pMHC interactions, but only intermediate (34 sec) half-life interactions induced efficient cytotoxic function in vivo.
+**Key evidence (concept):** Kalergis et al. (2001) first demonstrated the optimal-dwell-time principle using BM3.3 TCR mutants and a Kd-restricted CTL clone, with t½ measured by tetramer dissociation in **minutes**.
 
-**Key Reference:** Kalergis AM, et al. "Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex." *Nat Immunol*. 2001;2(3):229-234.
+**Key evidence (numerical, seconds-scale):** The most-cited *seconds-scale* numerical panel illustrating the principle comes from the OT-I TCR / SIINFEKL (OVA) altered-peptide-ligand panel, SPR at 25 °C — values compiled in Carreño et al. 2007 Table 1 from primary data in Alam 1999 and Rosette 2001:
+- K4 (SIIKFEKL): t½ <3.5 s — null
+- E1 (EIINFEKL): t½ 10.3 s — weak agonist / antagonist
+- OVA (SIINFEKL): t½ 33 s — agonist
+- A2 (SAINFEKL): t½ 34.7 s — agonist
+- G4 (SIIGFEKL): t½ 77 s — weak agonist (reduced IFN-γ)
+
+**Key Reference (concept):** Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. "Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex." *Nat Immunol*. 2001;2(3):229-234. PMID 11224522. (NB: third author is Doucey, not "Cardenas" — older drafts had the wrong third author.)
+
+**Key Reference (data):** Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. *Immunology*. 2007;121(2):227-237. PMID 17313485; PMCID PMC2265936.
 
 ### 1.4 Criticisms and Refinements
 
@@ -272,7 +281,8 @@ TCR pre-clustering creates conditions for cooperative binding:
 
 10. Huang J, Zarnitsyna VI, Liu B, et al. The kinetics of two-dimensional TCR and pMHC interactions determine T-cell responsiveness. *Nature*. 2010;464(7290):932-936.
 
-11. Kalergis AM, et al. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234.
+11. Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234. PMID 11224522.
+11a. Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. The half-life of the T-cell receptor/peptide-major histocompatibility complex interaction can modulate T-cell activation in response to bacterial challenge. *Immunology*. 2007;121(2):227-237. PMID 17313485; PMCID PMC2265936.
 
 12. McKeithan TW. Kinetic proofreading in T-cell receptor signal transduction. *Proc Natl Acad Sci USA*. 1995;92(11):5042-5046.
 

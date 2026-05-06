@@ -95,32 +95,46 @@ This figure illustrates that TCR affinity is not a single value but a spectrum w
 **File:** `figures/optimal_dwell_time.png`
 
 ### What the Figure Shows
-A bell-shaped curve showing T cell activation (y-axis) as a function of TCR-pMHC dwell time/half-life (x-axis), with three colored zones:
-- **Red zone (<10 s):** Too short — kinetic proofreading incomplete
-- **Green zone (~20-50 s):** Optimal — peak activation
-- **Orange zone (>60 s):** Too long — serial engagement blocked
+Five experimentally measured TCR-pMHC half-life data points overlaid on three colored zones (illustrative trend):
+- **Red zone (<~12 s):** Below the threshold for productive activation
+- **Green zone (~12-55 s):** Range containing the agonist peptides
+- **Orange zone (>~55 s):** Extended t½ associated with reduced effector function
 
-### Data Source and Basis
+### Data Source and Basis (CORRECTED 2026-05-06)
 
-**Primary source:** Kalergis AM, Boucheron N, Cardenas MA, et al. "Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex." *Nat Immunol*. 2001;2(3):229-234.
+**The numerical values plotted (3.5, 10.3, 33, 34.7, 77 seconds at 25 °C) are from a DIFFERENT paper than was originally cited.** The previous version of this document attributed these data to Kalergis 2001 *Nat Immunol* — that attribution was WRONG. Kalergis 2001 used the BM3.3 TCR system with half-lives measured by tetramer dissociation in **minutes**, not the OT-I/SIINFEKL data plotted here.
 
-**What Kalergis et al. actually measured:**
-- Used a panel of TCR-pMHC complexes with different measured half-lives
-- Assessed CD8+ T cell cytotoxic function (granule secretion, tumor killing) in vivo
-- Key quantitative findings:
-  - **t1/2 ≤ 10.3 seconds:** Did NOT induce efficient cytotoxic granule secretion or tumor killing
-  - **t1/2 = 34 seconds:** MAXIMUM cytotoxic activity — optimal dwell time
-  - **t1/2 = 77 seconds:** IMPAIRED function — too long
-  - These three data points are EXACT values from the paper
+**Actual primary source for the plotted data points:**
+- **Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM.** "The half-life of the T-cell receptor/peptide-major histocompatibility complex interaction can modulate T-cell activation in response to bacterial challenge." *Immunology*. 2007;121(2):227-237. **PMID: 17313485; PMCID: PMC2265936; DOI: 10.1111/j.1365-2567.2007.02561.x**
+- Table 1 of Carreño 2007 compiles SPR-derived half-lives at 25 °C for the OT-I TCR / H-2Kb panel.
+- The values originally come from two earlier primary papers (cited as refs 24 and 25 in Carreño 2007):
+  - **Alam SM et al.** *Immunity*. 1999;10(2):227-237 (original measurements for OVA, E1, K4)
+  - **Rosette C, Werlen G, Daniels MA, Holdorf AD, Wallis AR, Madrenas J, Hogquist KA, Jameson SC, Allen PM, Shaw AS.** "The impact of duration versus extent of TCR occupancy on T cell activation: a revision of the kinetic-proofreading model." *Immunity*. 2001;15(1):59-70. **PMID: 11485738** (G4 = 77 s value).
 
-**What is illustrative vs exact:**
-- **EXACT:** The three data points (10.3s = poor, 34s = optimal, 77s = impaired) are directly from Kalergis et al., 2001
-- **ILLUSTRATIVE:** The smooth bell-shaped curve connecting these points is schematic. The paper reports discrete data points, not a continuous function. The curve is drawn as a Poisson-like distribution peaking at 34s to illustrate the concept.
-- **EXACT:** The green dashed line at x=34 and the annotation "Optimal t1/2 ≈ 34 s" are from the paper
+**Exact published t½ values (Carreño 2007 Table 1, OT-I/H-2Kb, 25 °C, SPR):**
+| Peptide | Sequence | t½ (s) | Phenotype |
+|---------|----------|--------|-----------|
+| OVA | SIINFEKL | 33 | Agonist |
+| A2 | SAINFEKL | 34.7 | Agonist |
+| G4 | SIIGFEKL | 77 | Weak agonist (reduced IFN-γ) |
+| E1 | EIINFEKL | 10.3 | Weak agonist / antagonist |
+| K4 | SIIKFEKL | <3.5 | Null |
+
+**Conceptual framework (the "Goldilocks" / optimal-dwell-time idea itself):**
+- **Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG.** "Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex." *Nat Immunol*. 2001;2(3):229-234. **PMID: 11224522; DOI: 10.1038/85286.**
+- (Note: The third author is **Doucey**, not "Cardenas" — the latter spelling appearing in earlier versions of this document was a citation error.)
+- Kalergis 2001 used (i) the Kb-restricted **BM3.3** TCR with mutations placed in the TCR antigen-binding site and (ii) a Kd-restricted CTL clone with peptide variants. Half-lives were measured by **pMHC tetramer dissociation** and reported on the **minute** timescale, with the conceptual conclusion that both too-short and too-long t½ values impair T cell activation.
+
+**What is illustrative vs exact in our figure:**
+- **EXACT:** The five plotted t½ values (3.5, 10.3, 33, 34.7, 77 s) are directly from Carreño 2007 Table 1.
+- **EXACT:** The phenotype labels (agonist / weak agonist / null) are directly from Carreño 2007.
+- **SCHEMATIC:** The "relative T cell activation" y-axis is a qualitative ranking based on the reported phenotypes — it is NOT a numerical activation value taken from any single paper.
+- **SCHEMATIC:** The dashed blue trend line is illustrative (clearly labelled "Illustrative trend (not a fit)"), not a fit to data.
+- **SCHEMATIC:** The colored background zones are illustrative reading aids, not paper-derived boundaries.
 
 ### Interpretation
 
-This figure demonstrates that T cell activation is NOT a simple monotonic function of binding strength. Both too-weak and too-strong binding impair function. This bell-shaped relationship arises from the tension between two requirements: kinetic proofreading (which needs sufficient dwell time to complete sequential phosphorylation steps) and serial engagement (which needs the pMHC to dissociate and engage additional TCRs). The optimal dwell time of ~34 seconds represents the best compromise between these two competing demands. This concept is directly relevant to CAR-T design: supraphysiological scFv affinity may push the dwell time far to the right of the optimum, impairing function.
+This figure demonstrates that T cell activation is NOT a simple monotonic function of binding strength. Across the OT-I/OVA peptide-variant panel, agonist activity tracks with intermediate t½ values (~33-35 s); shorter t½ (≤10.3 s) sits below the threshold for productive activation, and longer t½ (77 s) shows reduced IFN-γ production. This pattern mirrors the conceptual prediction made by Kalergis 2001 in a different TCR system: both too-weak and too-strong binding impair function. The mechanistic framework is the tension between kinetic proofreading (needs sufficient t½ to complete sequential phosphorylation) and serial engagement (needs koff to release the pMHC for the next TCR). This concept is directly relevant to CAR-T design: supraphysiological scFv affinity may push the dwell time far to the right of the optimum, impairing function.
 
 **Additional reference:** Colf LA, et al. "The Goldilocks Model for TCR — Too Much Attraction Might Not Be Best for Vaccine Design." *PLoS Biol*. 2010;8(9):e1000482.
 
@@ -339,7 +353,7 @@ The serial engagement model elegantly explains how a T cell can be activated by 
 |--------|------|-------------------|--------------------------|
 | 1. Catch vs Slip Bond | Schematic of published trend | Liu et al., 2014, Cell | Peak force ~10 pN; OT-1 system peptide panel |
 | 2. Affinity Windows | Data-based schematic | Juang et al., 2010; Hoffmann & Slansky, 2020 | KD: 136, 211, 8.7 microM (exact); ~10, ~100 microM (means from review) |
-| 3. Optimal Dwell Time | Schematic of published data | Kalergis et al., 2001, Nat Immunol | t1/2: 10.3, 34, 77 seconds (exact from paper) |
+| 3. Optimal Dwell Time | Published data points + illustrative trend | Carreño et al., 2007, *Immunology* (Table 1; primary measurements: Alam 1999, Rosette 2001). Concept: Kalergis 2001 *Nat Immunol*. | t½: 3.5, 10.3, 33, 34.7, 77 seconds (OT-I/OVA panel @25°C, exact values) |
 | 4. Experimental Workflow | Project-specific design | Original (this project) | N/A |
 | 5. CAR vs TCR Affinity | Data-based comparison | Stone et al., 2009; Hoffmann & Slansky, 2020; Park et al., 2017 | KD values from cited reviews |
 | 6. Kinetic Proofreading | Conceptual model | McKeithan, 1995, PNAS | Model concept; signaling molecules from standard immunology |
@@ -364,15 +378,19 @@ If the PI asks to see the original figures, refer to the cited papers directly �
 
 ## Session 2 Figures (Added 2026-04-27)
 
-### Figure 10: fmc63_variant_affinities.png
-**What it shows:** Bar chart comparing published KD values for FMC63 wild-type and three alanine mutants at key contact residues.
-**Data source:** He et al., 2023, *Science Immunology* 8:eadf1426 (PMC10228544). WT KD confirmed by Seigner et al., 2023, *Sci Rep* 13:23024 (PMC10754921).
-**Exact values plotted:**
-- FMC63 WT: KD = 5.1 nM (Seigner) / 4.5 nM (He) — plotted as 5.1 nM
-- FMC63-Y70A: KD = 275.3 nM (54-fold weaker)
-- FMC63-Y261A: KD = 682.5 nM (134-fold weaker)
-- FMC63-Y260A: No detectable SPR binding — plotted as >5000 nM (lower bound)
-**Status:** Bar heights are EXACT published values. Y260A is a lower-bound estimate since no binding was detected.
+### Figure 10: fmc63_variant_affinities.png (CORRECTED 2026-05-06)
+**What it shows:** Bar chart comparing published KD values for FMC63 wild-type and three alanine mutants at key CD19-contacting residues.
+**Data source:** He C, Mansilla-Soto J, Khanra N, Hamieh M, Bustos V, Paquette AJ, Garcia Angus A, Shore DM, Rice WJ, Khelashvili G, Sadelain M, Meyerson JR. "CAR T cells targeting CD19 share a comparable structural fingerprint as antibody-based agents." *Sci Immunol*. 2023;8(81):eadf1426. **PMID 36867678; PMCID PMC10228544.**
+**Exact values plotted (He 2023, Fig. 3D, Biacore 8K SPR, Fab format, 1:1 Langmuir fit):**
+- FMC63 WT: KD = **4.5 nM** (Fab on Biacore 8K)
+- FMC63-Y70A: KD = **275.3 nM** (~61-fold weaker vs WT)
+- FMC63-Y261A: KD = **682.5 nM** (~152-fold weaker vs WT)
+- FMC63-Y260A: **No detectable SPR signal** — paper states "virtually no signal and a binding affinity could not be confidently calculated" (plotted as a hatched 1500 nM bar for visualization only)
+**Caveats:**
+- Earlier versions of this document/figure cited "Singh et al. 2023" — that was a misattribution; the correct first author is **He C**.
+- Earlier versions used WT KD = 5.1 nM and fold-changes of 54×/134× — those numbers are incorrect. He 2023 reports WT = 4.5 nM and the recalculated fold-changes are ~61×/~152×.
+- The KDs are measured on **Fab** format (not scFv) — Fab-format KD may differ modestly from the scFv format actually used in the CAR construct. Seigner/Zajc 2023 (*Sci Rep* 13:23024, PMC10754921) reports a 2–6 nM range for FMC63-scFv affinity, broadly consistent with the He Fab value.
+**Status:** Bar heights for WT/Y70A/Y261A are EXACT published values. Y260A bar is a schematic placeholder labelled "n.d." since no affinity could be calculated.
 
 ### Figure 11: antigen_density_threshold.png
 **What it shows:** Antigen density (CD19 molecules/cell) vs relative CAR-T function for CD28ζ and 4-1BBζ CARs.

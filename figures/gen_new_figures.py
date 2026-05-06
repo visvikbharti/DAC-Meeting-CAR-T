@@ -17,44 +17,60 @@ def save(fig, name):
 
 
 # === Figure: Published FMC63 Variant Affinities ===
-# Data source: Singh et al. 2023, Science Immunology 8:eadf1426 (PMC10228544)
-# and Seigner et al. 2023, Scientific Reports 13:23024 (PMC10754921)
+# Data source: He C, Mansilla-Soto J, Khanra N, Hamieh M, Bustos V, Paquette AJ,
+#   Garcia Angus A, Shore DM, Rice WJ, Khelashvili G, Sadelain M, Meyerson JR.
+#   Sci Immunol. 2023;8(81):eadf1426 (PMID 36867678; PMC10228544).
+# All KD values plotted are EXACTLY as reported in He et al. 2023 Fig. 3D:
+#   FMC63 WT (Fab format) = 4.5 nM by Biacore 8K SPR, single-cycle kinetics.
+#   Y70A = 275.3 nM (61-fold weaker vs WT).
+#   Y261A = 682.5 nM (152-fold weaker vs WT).
+#   Y260A = no detectable SPR signal — affinity could not be calculated.
 def fig_fmc63_variants():
     fig, ax = plt.subplots(figsize=(11, 7))
     variants = ['FMC63\nWT', 'FMC63\nY70A', 'FMC63\nY261A', 'FMC63\nY260A']
-    kd_values = [5.1, 275.3, 682.5, 5000]
-    fold_change = ['1x', '54x', '134x', '>1000x']
+    # Numerical bar heights for plotting only. Y260A has no measurable KD - shown
+    # as a hatched "no detectable binding" bar at top of axis range.
+    kd_for_plot = [4.5, 275.3, 682.5, 1500]
+    kd_label = ['4.5', '275.3', '682.5', 'n.d.']
+    fold_change = ['(reference)', '~61× weaker', '~152× weaker', 'no detectable signal']
     colors = ['#2ecc71', '#f39c12', '#e74c3c', '#8e44ad']
 
-    bars = ax.bar(variants, kd_values, color=colors, width=0.55,
+    bars = ax.bar(variants, kd_for_plot, color=colors, width=0.55,
                   edgecolor='black', linewidth=0.8)
+    # Mark Y260A bar as schematic / no detectable binding
+    bars[3].set_hatch('///')
+    bars[3].set_alpha(0.6)
 
-    for bar, fc, kd in zip(bars, fold_change, kd_values):
-        ypos = kd + max(kd_values) * 0.03
-        ax.text(bar.get_x() + bar.get_width()/2, ypos,
-                f'KD = {kd} nM\n({fc} weaker)' if kd > 5.1 else f'KD = {kd} nM\n(reference)',
+    for bar, fc, lbl in zip(bars, fold_change, kd_label):
+        h = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width()/2, h + 50,
+                f'KD = {lbl}{" nM" if lbl != "n.d." else ""}\n{fc}',
                 ha='center', va='bottom', fontsize=10, fontweight='bold')
 
-    ax.set_ylabel('KD (nM) by SPR', fontsize=13, fontweight='bold')
-    ax.set_title('Published FMC63 Affinity Variants at Target Residues',
-                 fontsize=14, fontweight='bold')
-    ax.set_ylim(0, 6500)
+    ax.set_ylabel('KD (nM) — Biacore 8K SPR (Fab format)', fontsize=12, fontweight='bold')
+    ax.set_title('FMC63 Alanine Mutants at CD19-Contacting Residues\n(He et al. 2023, Sci Immunol — Fig. 3D)',
+                 fontsize=13, fontweight='bold')
+    ax.set_ylim(0, 1900)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.tick_params(axis='x', labelsize=11)
 
-    ax.axhline(y=5.1, color='green', linestyle=':', alpha=0.4, linewidth=1)
+    ax.axhline(y=4.5, color='green', linestyle=':', alpha=0.4, linewidth=1)
 
-    fig.text(0.12, 0.01,
-             'Data: Singh et al., 2023, Science Immunology 8:eadf1426 (PMC10228544).\n'
-             'FMC63 WT KD = 5.1 nM confirmed by Seigner et al., 2023, Sci Rep 13:23024 (PMC10754921).\n'
-             'Y260A: no detectable SPR binding; plotted as >5000 nM (lower bound estimate).',
-             fontsize=7.5, color='gray', va='bottom')
-    ax.annotate('Tyr260 and Tyr261 are\ntarget residues in this project',
-                xy=(2.5, 3500), fontsize=10, fontstyle='italic', color='#555555',
+    fig.text(0.07, 0.005,
+             'Data: He C, Mansilla-Soto J, Khanra N, Hamieh M, Bustos V, Paquette AJ, Garcia Angus A,\n'
+             '  Shore DM, Rice WJ, Khelashvili G, Sadelain M, Meyerson JR. Sci Immunol. 2023;8(81):eadf1426.\n'
+             '  PMID 36867678; PMC10228544. KDs measured in Fab format on Biacore 8K, 1:1 Langmuir fit.\n'
+             'Y260A: paper states "virtually no signal and a binding affinity could not be confidently\n'
+             '  calculated" — bar shown hatched/schematic at 1500 nM for visualization only.\n'
+             'Caveat: Fab-format KD may differ modestly from scFv-format KD used in the CAR.',
+             fontsize=6.8, color='#444444', va='bottom', linespacing=1.4)
+    ax.annotate('Tyr260, Tyr261 are\ntarget residues in this project',
+                xy=(2.5, 1300), fontsize=10, fontstyle='italic', color='#555555',
                 ha='center',
                 bbox=dict(boxstyle='round,pad=0.4', facecolor='lightyellow',
                           edgecolor='gray', alpha=0.9))
+    plt.subplots_adjust(bottom=0.27)
     save(fig, 'fmc63_variant_affinities')
 
 

@@ -123,15 +123,23 @@ Efficient T cell activation requires an optimal dwell time of TCR-pMHC interacti
 
 ### 4.2 Quantitative Evidence
 
-Kalergis et al. (2001) provided key evidence for the optimal dwell time concept:
+The optimal-dwell-time principle was first articulated by **Kalergis et al. (2001)** using the BM3.3 TCR (Kb-restricted) plus a Kd-restricted CTL clone, where TCR-pMHC half-lives were measured by tetramer dissociation on the **minute** timescale; both decreased and increased binding half-life impaired T cell activation in those systems.
 
-- TCR-pMHC complexes with **low half-life (less than or equal to 10.3 seconds)** failed to induce efficient killing
-- Complexes with **high half-life (77 seconds)** also showed impaired function
-- Only **intermediate half-life (34 seconds)** TCR-pMHC interactions induced efficient cytotoxic granule secretion and tumor killing by CD8+ T cells in vivo
+The most-cited *seconds-scale* numerical illustration of the same principle comes from a separate panel — the **OT-I TCR / SIINFEKL (OVA) and altered peptide ligands**, measured by SPR at 25 °C — compiled in Carreño et al. 2007 (Table 1) from primary measurements in Alam et al. 1999 (*Immunity*) and Rosette et al. 2001 (*Immunity*):
 
-This demonstrates that T cell activation follows a bell-shaped curve when plotted against dwell time, rather than a simple monotonic increase with affinity.
+| Peptide | Sequence | t½ (s, 25 °C SPR) | Phenotype |
+|---------|----------|--------|-----------|
+| K4 | SIIKFEKL | <3.5 | Null |
+| E1 | EIINFEKL | 10.3 | Weak agonist / antagonist |
+| OVA | SIINFEKL | 33 | Agonist |
+| A2 | SAINFEKL | 34.7 | Agonist |
+| G4 | SIIGFEKL | 77 | Weak agonist (reduced IFN-γ) |
 
-**Key Reference:** Kalergis AM, Boucheron N, Cardenas MA, et al. "Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex." *Nat Immunol*. 2001;2(3):229-234.
+Together, these data demonstrate that T cell activation follows a non-monotonic relationship with dwell time — agonist function tracks intermediate t½ (~33-35 s) and falls off at both shorter and longer t½.
+
+**Key References (data points):** Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. "The half-life of the T-cell receptor/peptide-major histocompatibility complex interaction can modulate T-cell activation in response to bacterial challenge." *Immunology*. 2007;121(2):227-237. **PMID 17313485; PMCID PMC2265936.** Primary measurements: Alam SM et al. *Immunity*. 1999;10(2):227-237 and Rosette C et al. *Immunity*. 2001;15(1):59-70 (PMID 11485738).
+
+**Key Reference (concept):** Kalergis AM, Boucheron N, **Doucey MA**, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. "Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex." *Nat Immunol*. 2001;2(3):229-234. **PMID 11224522; DOI 10.1038/85286.** (NB: third author is Doucey, not "Cardenas" — earlier versions of this document had the wrong third author.)
 
 **Key Reference:** Colf LA, et al. "The Goldilocks Model for TCR --- Too Much Attraction Might Not Be Best for Vaccine Design." *PLoS Biol*. 2010;8(9):e1000482.
 
@@ -232,7 +240,8 @@ Multiple studies demonstrate that reducing scFv affinity can paradoxically impro
 
 3. Huang J, Zarnitsyna VI, Liu B, et al. The kinetics of two-dimensional TCR and pMHC interactions determine T-cell responsiveness. *Nature*. 2010;464(7290):932-936.
 
-4. Kalergis AM, Boucheron N, Cardenas MA, et al. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234.
+4. Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234. PMID 11224522.
+4a. Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. The half-life of the T-cell receptor/peptide-major histocompatibility complex interaction can modulate T-cell activation in response to bacterial challenge. *Immunology*. 2007;121(2):227-237. PMID 17313485; PMC2265936. (Source of the OT-I OVA/A2/G4/E1/K4 t½ values cited above.)
 
 5. Hebeisen M, Schmidt J, Guillaume P, et al. TCR-ligand dissociation rate is a robust and stable biomarker of CD8+ T cell potency. *JCI Insight*. 2017;2(14):e92570.
 

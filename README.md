@@ -118,7 +118,7 @@ This repository contains comprehensive, citation-verified documentation for the 
 ## Key Findings
 
 - koff is a better predictor of T cell activation than KD
-- Optimal dwell time ~34s for CD8+ T cells (Kalergis et al. 2001)
+- OT-I OVA-agonist t½ ≈ 33-35 s at 25 °C SPR (Carreño et al. 2007 *Immunology* Table 1; primary data Alam 1999 + Rosette 2001). Conceptual "Goldilocks" framework: Kalergis et al. 2001 *Nat Immunol* (BM3.3 system, t½ in *minutes*).
 - CARs operate at 0.1-10 nM KD vs TCRs at 1-100 uM — fundamentally different signaling regime
 - Lower-affinity CARs can outperform higher-affinity ones (Ghorashian et al. 2019)
 - 4-1BB CARs are more sensitive to affinity changes than CD28 CARs (Drent et al. 2019)

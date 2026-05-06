@@ -180,15 +180,23 @@ Efficient T cell activation requires an optimal dwell time of TCR-pMHC interacti
 
 ### 4.2 Quantitative Evidence
 
-Kalergis et al. (2001) provided key evidence for the optimal dwell time concept:
+The optimal-dwell-time principle was first articulated by **Kalergis et al. (2001)** using the BM3.3 TCR (Kb-restricted) plus a Kd-restricted CTL clone, with TCR-pMHC half-lives measured by tetramer dissociation on the **minute** timescale. Both decreased and increased half-lives impaired T cell activation in those systems.
 
-- TCR-pMHC complexes with **low half-life (less than or equal to 10.3 seconds)** failed to induce efficient killing
-- Complexes with **high half-life (77 seconds)** also showed impaired function
-- Only **intermediate half-life (34 seconds)** TCR-pMHC interactions induced efficient cytotoxic granule secretion and tumor killing by CD8+ T cells in vivo
+The most-cited *seconds-scale* numerical illustration of the same principle comes from a separate panel — the **OT-I TCR / SIINFEKL (OVA) and altered peptide ligands**, measured by SPR at 25 °C — compiled in Carreño 2007 Table 1 from primary measurements in Alam 1999 (*Immunity*) and Rosette 2001 (*Immunity*):
 
-This demonstrates that T cell activation follows a bell-shaped curve when plotted against dwell time, rather than a simple monotonic increase with affinity.
+| Peptide | Sequence | t½ (s, 25 °C SPR) | Phenotype |
+|---------|----------|--------|-----------|
+| K4 | SIIKFEKL | <3.5 | Null |
+| E1 | EIINFEKL | 10.3 | Weak agonist / antagonist |
+| OVA | SIINFEKL | 33 | Agonist |
+| A2 | SAINFEKL | 34.7 | Agonist |
+| G4 | SIIGFEKL | 77 | Weak agonist (reduced IFN-γ) |
 
-**Key Reference:** Kalergis AM, Boucheron N, Cardenas MA, et al. "Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex." *Nat Immunol*. 2001;2(3):229-234.
+Together, these data demonstrate that T cell activation follows a non-monotonic relationship with dwell time — agonist function tracks intermediate t½ (~33-35 s) and falls off at both shorter and longer t½.
+
+**Key Reference (data points):** Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. "The half-life of the T-cell receptor/peptide-major histocompatibility complex interaction can modulate T-cell activation in response to bacterial challenge." *Immunology*. 2007;121(2):227-237. **PMID 17313485; PMCID PMC2265936.**
+
+**Key Reference (concept):** Kalergis AM, Boucheron N, **Doucey MA**, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. "Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex." *Nat Immunol*. 2001;2(3):229-234. **PMID 11224522.** (NB: third author is Doucey, not "Cardenas" — earlier versions had the wrong third author.)
 
 **Key Reference:** Colf LA, et al. "The Goldilocks Model for TCR --- Too Much Attraction Might Not Be Best for Vaccine Design." *PLoS Biol*. 2010;8(9):e1000482.
 
@@ -289,7 +297,8 @@ Multiple studies demonstrate that reducing scFv affinity can paradoxically impro
 
 3. Huang J, Zarnitsyna VI, Liu B, et al. The kinetics of two-dimensional TCR and pMHC interactions determine T-cell responsiveness. *Nature*. 2010;464(7290):932-936.
 
-4. Kalergis AM, Boucheron N, Cardenas MA, et al. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234.
+4. Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234. PMID 11224522.
+4a. Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. The half-life of the T-cell receptor/peptide-major histocompatibility complex interaction can modulate T-cell activation in response to bacterial challenge. *Immunology*. 2007;121(2):227-237. PMID 17313485; PMC2265936.
 
 5. Hebeisen M, Schmidt J, Guillaume P, et al. TCR-ligand dissociation rate is a robust and stable biomarker of CD8+ T cell potency. *JCI Insight*. 2017;2(14):e92570.
 
@@ -691,9 +700,13 @@ koff too fast           koff just right      koff too slow
 (<< 1 sec dwell)        (~1-30 sec dwell)    (>> 30 sec dwell)
 ```
 
-**Key evidence:** Kalergis et al. (2001) demonstrated that neither low (less than or equal to 10.3 sec) nor high (77 sec) half-life TCR-pMHC interactions, but only intermediate (34 sec) half-life interactions induced efficient cytotoxic function in vivo.
+**Key evidence (concept):** Kalergis et al. (2001) first demonstrated the optimal-dwell-time principle using BM3.3 TCR mutants and a Kd-restricted CTL clone, with t½ measured by tetramer dissociation in **minutes**.
 
-**Key Reference:** Kalergis AM, et al. "Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex." *Nat Immunol*. 2001;2(3):229-234.
+**Key evidence (numerical, seconds-scale, OT-I + OVA panel, SPR @ 25 °C):** OVA 33 s (agonist), A2 34.7 s (agonist), G4 77 s (weak agonist, reduced IFN-γ), E1 10.3 s (weak/antagonist), K4 <3.5 s (null) — values from Carreño et al. 2007 *Immunology* Table 1, primary measurements in Alam 1999 *Immunity* and Rosette 2001 *Immunity*.
+
+**Key Reference (concept):** Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. *Nat Immunol*. 2001;2(3):229-234. PMID 11224522.
+
+**Key Reference (data):** Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. *Immunology*. 2007;121(2):227-237. PMID 17313485; PMCID PMC2265936.
 
 ### 1.4 Criticisms and Refinements
 
@@ -917,7 +930,9 @@ TCR pre-clustering creates conditions for cooperative binding:
 
 10. Huang J, Zarnitsyna VI, Liu B, et al. The kinetics of two-dimensional TCR and pMHC interactions determine T-cell responsiveness. *Nature*. 2010;464(7290):932-936.
 
-11. Kalergis AM, et al. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234.
+11. Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234. **PMID 11224522.**
+
+11a. Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. The half-life of the T-cell receptor/peptide-major histocompatibility complex interaction can modulate T-cell activation in response to bacterial challenge. *Immunology*. 2007;121(2):227-237. **PMID 17313485; PMC2265936.**
 
 12. McKeithan TW. Kinetic proofreading in T-cell receptor signal transduction. *Proc Natl Acad Sci USA*. 1995;92(11):5042-5046.
 
@@ -1281,7 +1296,7 @@ Functional Outcome (activation, exhaustion, memory, cytotoxicity)
 The dissociation rate (koff) is a better predictor of T cell activation than equilibrium affinity (KD). This is because T cell signaling depends on temporal parameters (how long the bond lasts, whether it survives kinetic proofreading checkpoints) rather than equilibrium occupancy (Hebeisen et al., 2017, *JCI Insight* 2:e92570).
 
 **Principle 2: There exists an optimal dwell time.**
-Neither too short nor too long. Intermediate half-life (~34 seconds for CD8+ T cells) maximizes T cell function by balancing kinetic proofreading completion against serial engagement (Kalergis et al., 2001, *Nat Immunol* 2:229-234).
+Neither too short nor too long. Intermediate t½ (~33-35 s for the OT-I/OVA agonist panel at 25 °C SPR; data compiled in Carreño 2007 *Immunology* 121:227-237 Table 1, primary measurements Alam 1999 *Immunity* + Rosette 2001 *Immunity*) maximizes T cell function by balancing kinetic-proofreading completion against serial engagement. The conceptual framework was first laid out by **Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG.** *Nat Immunol* 2001;2(3):229-234 (PMID 11224522), using the BM3.3 TCR system with t½ measured by tetramer dissociation in **minutes** (not seconds).
 
 **Principle 3: Mechanical force discriminates agonists from antagonists.**
 Under physiological piconewton forces, agonist pMHC forms catch bonds (bond strengthens) while antagonist pMHC forms slip bonds (bond weakens). This force-dependent behavior is a better discriminator than zero-force affinity (Liu et al., 2014, *Cell* 157:357-368).
@@ -1353,7 +1368,8 @@ The project plan to characterize selected mutants by SPR or BLI is well-justifie
 | TCR-pMHC KD (CD4+ average) | 52 +/- 33 microM | Aleksic et al., 2007 |
 | kon range | 600 - 400,000 M-1 s-1 | Stone et al., 2009 |
 | koff range | 0.009 - 0.975 s-1 | Stone et al., 2009 |
-| Optimal dwell time (t1/2) | ~34 seconds (CD8+ T cells) | Kalergis et al., 2001 |
+| OT-I OVA agonist t½ | 33 s (OVA), 34.7 s (A2) | Carreño et al., 2007 (Table 1; primary data Alam 1999, Rosette 2001) |
+| Optimal-dwell-time concept | Bell-shaped activation vs t½ (BM3.3 system, *minute* timescale) | Kalergis et al., 2001 |
 
 ### 3.2 Thymic Selection Thresholds
 
@@ -1466,7 +1482,8 @@ The following landmark references have been independently verified through web s
 6. Hebeisen M, et al. TCR-ligand dissociation rate is a robust and stable biomarker of CD8+ T cell potency. *JCI Insight*. 2017;2(14):e92570. **VERIFIED**
 
 ### Optimal Dwell Time
-7. Kalergis AM, et al. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234. **VERIFIED**
+7. Kalergis AM, Boucheron N, Doucey MA, Palmieri E, Goyarts EC, Vegh Z, Luescher IF, Nathenson SG. Efficient T cell activation requires an optimal dwell-time of interaction between the TCR and the pMHC complex. *Nat Immunol*. 2001;2(3):229-234. **PMID 11224522. VERIFIED 2026-05-06.** (Concept; BM3.3 TCR system; t½ in *minutes*.)
+7a. Carreño LJ, Bueno SM, Bull P, Nathenson SG, Kalergis AM. The half-life of the T-cell receptor/peptide-major histocompatibility complex interaction can modulate T-cell activation in response to bacterial challenge. *Immunology*. 2007;121(2):227-237. **PMID 17313485; PMC2265936. VERIFIED 2026-05-06.** (Source of OT-I + OVA panel t½ values in *seconds*.)
 
 ### Mechanical Forces and Catch Bonds
 8. Liu B, Chen W, Evavold BD, Zhu C. Accumulation of dynamic catch bonds between TCR and agonist peptide-MHC triggers T cell signaling. *Cell*. 2014;157(2):357-368. **VERIFIED** --- PubMed ID: 24725404
